@@ -5,7 +5,7 @@ const CallToAction = () => {
     <section className="relative w-full overflow-hidden">
       {/* Background Split (The Bridge) */}
       <div className="absolute inset-0 flex flex-col pointer-events-none">
-        <div className="flex-1 bg-white"></div>
+        <div className="flex-1 bg-[#212121]"></div>
         <div className="flex-1 bg-dark"></div>
       </div>
 
@@ -17,11 +17,10 @@ const CallToAction = () => {
           <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-[2.5rem] -z-10 group-hover:bg-primary/30 transition-all duration-500"></div>
 
           {/* Floating Card */}
-          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-primary via-primaryDark to-[#7F1D1D] shadow-2xl border border-white/10 backdrop-blur-sm">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-red-700 shadow-2xl border border-white/10 backdrop-blur-sm">
             
             {/* Background Decorative Blobs */}
             <div className="absolute top-[-20%] left-[-10%] w-64 h-64 bg-white/10 blur-[60px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-[-20%] right-[-10%] w-80 h-80 bg-black/20 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute top-[20%] right-[10%] w-32 h-32 bg-white/5 blur-[40px] rounded-full pointer-events-none"></div>
 
             {/* SVG Circular Pattern Overlay (Subtle) */}
@@ -43,18 +42,16 @@ const CallToAction = () => {
                 Simplify Hospital Billing & Payments
               </h2>
               
-              <p className="text-white/80 text-sm sm:text-base md:text-lg font-medium max-w-xl mb-10 leading-relaxed">
+              <p className="text-white text-sm sm:text-base md:text-lg font-medium max-w-xl mb-10 leading-relaxed">
                 Manage invoices, track payments, and streamline operations effortlessly.
               </p>
 
               <div className="flex flex-col items-center gap-4">
-                <button className="group relative bg-gradient-to-r from-[#1a1a1a] to-dark text-white px-8 sm:px-12 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base shadow-2xl hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.4)] transition-all duration-300 active:scale-95">
+                <button className="group relative bg-white text-black px-10 py-4 rounded-full font-bold text-sm sm:text-base shadow-2xl hover:scale-105 transition-all duration-300 active:scale-95 uppercase tracking-widest">
                   <span className="relative z-10">Get Started Now</span>
-                  {/* Subtle Button Inner Glow */}
-                  <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/5 transition-all duration-300"></div>
                 </button>
                 
-                <div className="flex items-center gap-2 text-white/60 text-xs sm:text-sm font-medium">
+                <div className="flex items-center gap-2 text-white/80 text-xs sm:text-sm font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                   </svg>

@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/40 text-[10px] sm:text-xs font-medium tracking-wide">
-            © 2025 MACVID SOFTWARE. ALL RIGHTS RESERVED.
+            © 2025 MAKWID SOFTWARE. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center gap-2 text-white/40 text-[10px] sm:text-xs font-medium">
             <span>MADE WITH</span>

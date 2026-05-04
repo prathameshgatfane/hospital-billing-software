@@ -3,7 +3,7 @@ import Footer from "../components/common/Footer";
 
 const MainLayout = ({ children }) => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-white via-gray-100 to-gray-200">
+        <div className="min-h-screen bg-[#212121]">
 
             {/* Navbar */}
             <Navbar />

@@ -1,5 +1,6 @@
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/home/Hero";
+import StatsMarquee from "../components/home/StatsMarquee";
 import KeyFeatures from "../components/home/KeyFeatures";
 import TrustedBy from "../components/home/TrustedBy";
 import Integrations from "../components/home/Integrations";
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <MainLayout>
             <Hero />
+            <StatsMarquee />
             <KeyFeatures />
             <TrustedBy />
             <Integrations />

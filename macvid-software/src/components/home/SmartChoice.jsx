@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CheckIcon = () => (
-  <svg className="w-3.5 h-3.5 text-[#0066CC] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className="w-3.5 h-3.5 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
   </svg>
 );
@@ -11,7 +11,7 @@ const SmartChoice = () => {
     {
       title: "Reclaim Your Time",
       icon: (
-        <svg className="w-8 h-8 text-[#0066CC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
@@ -26,7 +26,7 @@ const SmartChoice = () => {
     {
       title: "Grow Your Practice",
       icon: (
-        <svg className="w-8 h-8 text-[#0066CC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
@@ -41,7 +41,7 @@ const SmartChoice = () => {
     {
       title: "Deliver Better Care",
       icon: (
-        <svg className="w-8 h-8 text-[#0066CC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
@@ -56,14 +56,15 @@ const SmartChoice = () => {
   ];
 
   return (
-    <section className="bg-[#F4F7F9] py-16 px-4 md:px-12 lg:px-20 min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="bg-[#212121] py-24 px-4 md:px-12 lg:px-20 min-h-screen flex items-center justify-center overflow-hidden">
       <div className="max-w-[1440px] mx-auto w-full">
         {/* Header Section */}
-        <div className="text-center mb-12 md:mb-16 max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-700 mb-4 leading-tight">
+        <div className="text-center mb-16 md:mb-24 max-w-4xl mx-auto px-4 animate-in fade-in slide-in-from-bottom duration-1000">
+          <div className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-4">Scalability</div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1] tracking-tighter">
             The Smart, Scalable Choice for Your Clinic
           </h2>
-          <p className="text-primary text-sm sm:text-base font-bold">
+          <p className="text-gray-400 text-base sm:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
             Automate admin, connect systems, and keep costs under control with a platform built for ambitious clinics.
           </p>
         </div>
@@ -73,25 +74,27 @@ const SmartChoice = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col border border-gray-100/50"
+              className="bg-red-700 rounded-[2.5rem] p-8 sm:p-10 md:p-12 shadow-2xl hover:shadow-primary/5 transition-all duration-500 flex flex-col border border-white/5 hover:border-white/10 group transform hover:-translate-y-2"
             >
               {/* Card Header (Icon & Title) */}
-              <div className="flex items-center gap-3 mb-6 text-gray-700">
-                {card.icon}
-                <h3 className="text-lg sm:text-xl font-bold text-gray-700">{card.title}</h3>
+              <div className="flex flex-col gap-6 mb-8 text-white">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-500">
+                  {card.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white group-hover:text-black transition-colors duration-500">{card.title}</h3>
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm font-medium leading-relaxed mb-8 border-b border-gray-100 pb-8">
+              <p className="text-gray-200 text-sm font-medium leading-relaxed mb-10 border-b border-white/5 pb-10">
                 {card.description}
               </p>
 
               {/* Features List */}
-              <ul className="space-y-4 mt-auto">
+              <ul className="space-y-5 mt-auto">
                 {card.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckIcon />
-                    <span className="text-gray-700 text-xs sm:text-sm font-semibold">{feature}</span>
+                  <li key={idx} className="text-white flex items-start gap-3">
+                    < CheckIcon />
+                    <span className="text-white text-sm font-semibold tracking-wide">{feature}</span>
                   </li>
                 ))}
               </ul>

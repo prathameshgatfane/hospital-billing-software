@@ -17,16 +17,16 @@ const testimonialImages = [
 ];
 
 const TestimonialCard = ({ img, name, className }) => (
-  <div className={`relative rounded-xl md:rounded-2xl overflow-hidden shadow-md hover:shadow-xl group ${className}`}>
+  <div className={`relative rounded-xl md:rounded-3xl overflow-hidden shadow-2xl group ${className} border border-white/5 hover:border-white/20 transition-all duration-700`}>
     <img 
       src={img} 
       alt={name} 
-      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100" 
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-    <div className="absolute bottom-1.5 left-1.5 sm:bottom-2 sm:left-2 md:bottom-3 md:left-3 max-w-[85%]">
-      <div className="bg-white/95 backdrop-blur-sm px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-2.5 md:py-1 rounded-md shadow-sm transform translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-        <span className="text-[7px] sm:text-[9px] md:text-[10px] font-bold text-gray-900 tracking-tight truncate block">{name}</span>
+    <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+    <div className="absolute bottom-3 left-3 right-3">
+      <div className="bg-white/5 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+        <span className="text-[10px] font-bold text-white tracking-widest uppercase block text-center truncate">{name}</span>
       </div>
     </div>
   </div>
@@ -34,86 +34,78 @@ const TestimonialCard = ({ img, name, className }) => (
 
 const Testimonials = () => {
   return (
-    <section className="relative bg-white h-[100vh] min-h-[600px] sm:min-h-[700px] max-h-[900px] flex flex-col items-center justify-between overflow-hidden pt-12 pb-8">
-      
-      {/* Background Vertical Dotted Lines */}
-      <div className="absolute inset-0 flex justify-evenly pointer-events-none opacity-[0.12] z-0">
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className={`w-px h-full border-l-2 border-dotted border-gray-400 ${i === 0 || i === 7 ? 'hidden md:block' : ''}`}></div>
-        ))}
-      </div>
+    <section className="relative bg-[#212121] min-h-screen flex flex-col items-center justify-center overflow-hidden py-24">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full -z-0"></div>
 
-      <div className="w-full max-w-[1600px] mx-auto relative z-10 px-2 sm:px-4 flex flex-col h-full items-center justify-center">
+      <div className="w-full max-w-[1600px] mx-auto relative z-10 px-4 flex flex-col items-center">
         
         {/* Arching Grid of 13 Images */}
-        <div className="flex items-start justify-center gap-3 sm:gap-4 md:gap-6 w-full overflow-x-hidden sm:overflow-visible px-3 sm:px-2 snap-x hide-scrollbar mt-4 md:mt-8">
+        <div className="flex items-start justify-center gap-4 md:gap-8 w-full overflow-hidden px-4 mb-20">
           
           {/* Col 1 (2 images) */}
-          <div className="hidden sm:flex flex-col gap-2 sm:gap-4 md:gap-6 mt-24 md:mt-32 flex-1 max-w-[200px] min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[0].url} name={testimonialImages[0].name} className="h-24 sm:h-32 md:h-40" />
-            <TestimonialCard img={testimonialImages[1].url} name={testimonialImages[1].name} className="h-32 sm:h-40 md:h-48" />
+          <div className="hidden lg:flex flex-col gap-6 mt-32 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[0].url} name={testimonialImages[0].name} className="h-40" />
+            <TestimonialCard img={testimonialImages[1].url} name={testimonialImages[1].name} className="h-48" />
           </div>
 
           {/* Col 2 (2 images) */}
-          <div className="hidden sm:flex flex-col gap-2 sm:gap-4 md:gap-6 mt-12 md:mt-16 flex-1 max-w-[200px] min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[2].url} name={testimonialImages[2].name} className="h-32 sm:h-40 md:h-52" />
-            <TestimonialCard img={testimonialImages[3].url} name={testimonialImages[3].name} className="h-20 sm:h-24 md:h-32" />
+          <div className="hidden md:flex flex-col gap-6 mt-16 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[2].url} name={testimonialImages[2].name} className="h-52" />
+            <TestimonialCard img={testimonialImages[3].url} name={testimonialImages[3].name} className="h-32" />
           </div>
 
-          {/* Col 3 (2 images — left stack on mobile) */}
-          <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 mt-0 flex-1 min-w-0 max-w-[200px] sm:min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[4].url} name={testimonialImages[4].name} className="h-28 sm:h-24 md:h-32" />
-            <TestimonialCard img={testimonialImages[5].url} name={testimonialImages[5].name} className="h-40 sm:h-48 md:h-60" />
+          {/* Col 3 (2 images) */}
+          <div className="flex flex-col gap-6 mt-0 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[4].url} name={testimonialImages[4].name} className="h-32" />
+            <TestimonialCard img={testimonialImages[5].url} name={testimonialImages[5].name} className="h-60" />
           </div>
 
           {/* Col 4 - Center (1 image) */}
-          <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 mt-16 sm:mt-20 md:mt-28 flex-1 min-w-0 max-w-[220px] sm:min-w-[120px] snap-center z-20">
-            <TestimonialCard img={testimonialImages[6].url} name={testimonialImages[6].name} className="h-48 sm:h-56 md:h-72 shadow-2xl border-4 border-white" />
+          <div className="flex flex-col gap-6 mt-20 flex-1 max-w-[240px] z-20">
+            <TestimonialCard img={testimonialImages[6].url} name={testimonialImages[6].name} className="h-80 shadow-[0_0_50px_rgba(220,38,38,0.2)] border-white/20" />
           </div>
 
-          {/* Col 5 (2 images — right stack on mobile) */}
-          <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 mt-0 flex-1 min-w-0 max-w-[200px] sm:min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[7].url} name={testimonialImages[7].name} className="h-40 sm:h-48 md:h-60" />
-            <TestimonialCard img={testimonialImages[8].url} name={testimonialImages[8].name} className="h-28 sm:h-24 md:h-32" />
+          {/* Col 5 (2 images) */}
+          <div className="flex flex-col gap-6 mt-0 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[7].url} name={testimonialImages[7].name} className="h-60" />
+            <TestimonialCard img={testimonialImages[8].url} name={testimonialImages[8].name} className="h-32" />
           </div>
 
           {/* Col 6 (2 images) */}
-          <div className="hidden sm:flex flex-col gap-2 sm:gap-4 md:gap-6 mt-12 md:mt-16 flex-1 max-w-[200px] min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[9].url} name={testimonialImages[9].name} className="h-20 sm:h-24 md:h-32" />
-            <TestimonialCard img={testimonialImages[10].url} name={testimonialImages[10].name} className="h-32 sm:h-40 md:h-52" />
+          <div className="hidden md:flex flex-col gap-6 mt-16 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[9].url} name={testimonialImages[9].name} className="h-32" />
+            <TestimonialCard img={testimonialImages[10].url} name={testimonialImages[10].name} className="h-52" />
           </div>
 
           {/* Col 7 (2 images) */}
-          <div className="hidden sm:flex flex-col gap-2 sm:gap-4 md:gap-6 mt-24 md:mt-32 flex-1 max-w-[200px] min-w-[100px] snap-center">
-            <TestimonialCard img={testimonialImages[11].url} name={testimonialImages[11].name} className="h-32 sm:h-40 md:h-48" />
-            <TestimonialCard img={testimonialImages[12].url} name={testimonialImages[12].name} className="h-24 sm:h-32 md:h-40" />
+          <div className="hidden lg:flex flex-col gap-6 mt-32 flex-1 max-w-[200px]">
+            <TestimonialCard img={testimonialImages[11].url} name={testimonialImages[11].name} className="h-48" />
+            <TestimonialCard img={testimonialImages[12].url} name={testimonialImages[12].name} className="h-40" />
           </div>
 
         </div>
 
-        {/* Text Content - Pulled up tightly with negative margin */}
-        <div className="relative z-30 text-center max-w-3xl mx-auto px-4 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">
+        {/* Text Content */}
+        <div className="relative z-30 text-center max-w-4xl mx-auto px-6">
+          <div className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-6">Testimonials</div>
           
-          <div className="absolute inset-0 bg-white/95 blur-xl -z-10 h-[150%] -top-[20%] rounded-[100%] pointer-events-none"></div>
-
-          <div className="relative z-10 inline-block bg-white text-gray-800 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-4 sm:mb-6 border border-gray-100 shadow-sm">
-            Testimonials
-          </div>
-          
-          <h2 className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tighter leading-[1.1]">
             Trusted by leading clinics <br className="hidden sm:block" />
-            <span className="text-gray-400">and healthcare experts</span>
+            <span className="text-gray-500 italic">and healthcare experts</span>
           </h2>
           
-          <p className="relative z-10 text-gray-500 font-medium text-xs sm:text-sm md:text-base max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <p className="text-gray-400 font-medium text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
             Learn why professionals trust Macvid to streamline their practice and complete their patient journeys.
           </p>
           
-          <button className="relative z-10 bg-dark text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 shadow-xl flex items-center justify-center gap-2 mx-auto">
-            Read Success Stories
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7-7 7M21 12H3" />
-            </svg>
+          <button className="group relative bg-white text-black px-10 py-4 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4 mx-auto tracking-widest uppercase overflow-hidden">
+            <span className="relative z-10">Read Success Stories</span>
+            <div className="relative z-10 w-8 h-8 rounded-full border border-black/10 flex items-center justify-center group-hover:border-white/20 transition-all duration-500">
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7-7 7M21 12H3" />
+              </svg>
+            </div>
           </button>
         </div>
 
