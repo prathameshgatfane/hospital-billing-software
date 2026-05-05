@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "vite": "^6.4.1"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -26,9 +25,6 @@
     "globals": "^17.5.0",
     "postcss": "^8.5.13",
     "tailwindcss": "^3.4.3",
-    "vite": "^8.0.10",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "vite": "^8.0.10"
   }
 }
