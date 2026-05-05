@@ -96,7 +96,7 @@ const integrations = [
 const Integrations = () => {
   return (
     <section className="bg-[#212121] py-24 px-4 md:px-12 lg:px-20 min-h-screen flex flex-col justify-center overflow-hidden">
-      <div className="max-w-[1440px] mx-auto w-full">
+      <div className="max-w-[1200px] mx-auto w-full">
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-24 max-w-3xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight tracking-tight">

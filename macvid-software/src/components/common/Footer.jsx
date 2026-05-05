@@ -1,36 +1,64 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
   const footerLinks = [
     {
       title: "Products",
-      links: ["Billing Software", "Invoice Management", "Payment Tracking", "Patient Records", "Reports & Analytics"]
+      links: [
+        { name: "Billing Software", path: "#" },
+        { name: "Invoice Management", path: "#" },
+        { name: "Payment Tracking", path: "#" },
+        { name: "Patient Records", path: "#" },
+        { name: "Reports & Analytics", path: "#" }
+      ]
     },
     {
       title: "Solutions",
-      links: ["Hospitals", "Clinics", "Laboratories", "Pharmacies", "Multi-location"]
+      links: [
+        { name: "Hospitals", path: "#" },
+        { name: "Clinics", path: "#" },
+        { name: "Laboratories", path: "#" },
+        { name: "Pharmacies", path: "#" },
+        { name: "Multi-location", path: "#" }
+      ]
     },
     {
-      title: "Company",
-      links: ["About Us", "Careers", "Blog", "Newsroom", "Partners"]
+      title: "Quick Links",
+      links: [
+        { name: "Home", path: "/" },
+        { name: "Features", path: "/features" },
+        { name: "Solutions", path: "/solutions" },
+        { name: "Pricing", path: "/pricing" },
+        { name: "Testimonials", path: "/testimonials" },
+        { name: "Resources", path: "/resources" },
+        { name: "Contact", path: "/contact" }
+      ]
     },
     {
       title: "Support",
-      links: ["Help Center", "Documentation", "Contact Us", "FAQs", "System Status"]
+      links: [
+        { name: "Help Center", path: "#" },
+        { name: "Documentation", path: "#" },
+        { name: "Contact Us", path: "#" },
+        { name: "FAQs", path: "#" },
+        { name: "System Status", path: "#" }
+      ]
     }
   ];
 
   return (
     <footer className="bg-dark text-white relative overflow-hidden pt-16 pb-32 sm:pb-40">
-      <div className="max-w-[1440px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
 
-          {/* Brand Column */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="Macvid" className="h-14 md:h-20 mb-6" />
+            <Link to="/">
+              <img src={logo} alt="Macvid" className="h-14 md:h-20 mb-6" />
+            </Link>
             <p className="text-white/70 text-sm md:text-base max-w-xs leading-relaxed mb-8 font-medium">
               Simplifying hospital billing & clinic management across India with state-of-the-art technology.
             </p>
@@ -58,10 +86,13 @@ const Footer = () => {
               </h4>
               <ul className="space-y-4">
                 {section.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-white/60 text-sm font-medium hover:text-primary transition-colors duration-300 block">
-                      {link}
-                    </a>
+                   <li key={link.name}>
+                    <Link 
+                      to={link.path} 
+                      className="text-white/60 text-sm font-medium hover:text-primary transition-colors duration-300 block"
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -57,7 +57,7 @@ const SmartChoice = () => {
 
   return (
     <section className="bg-[#212121] py-24 px-4 md:px-12 lg:px-20 min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="max-w-[1440px] mx-auto w-full">
+      <div className="max-w-[1200px] mx-auto w-full">
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-24 max-w-4xl mx-auto px-4 animate-in fade-in slide-in-from-bottom duration-1000">
           <div className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-4">Scalability</div>

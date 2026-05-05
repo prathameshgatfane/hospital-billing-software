@@ -4,7 +4,7 @@ import expertsImage from "../../assets/india-experts.png";
 const IndiaExpertise = () => {
   return (
     <section className="bg-[#212121] py-24 px-4 md:px-12 lg:px-20 min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+      <div className="max-w-[1200px] mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
         {/* Left Side: Content */}
         <div className="flex-1 max-w-2xl animate-in fade-in slide-in-from-left duration-1000">
@@ -47,7 +47,7 @@ const IndiaExpertise = () => {
 
         {/* Right Side: Image with Floating Icons */}
         <div className="flex-1 relative flex justify-center lg:justify-end animate-in fade-in slide-in-from-right duration-1000">
-          <div className="relative max-w-[500px]">
+          <div className="relative max-w-[420px]">
             {/* Glow Effect behind image */}
             <div className="absolute -inset-10 bg-primary/10 blur-[100px] rounded-full -z-10"></div>
 

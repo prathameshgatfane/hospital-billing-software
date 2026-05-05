@@ -70,7 +70,7 @@ const KeyFeatures = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
 
-      <div className="max-w-[1440px] mx-auto w-full relative z-10 flex flex-col h-full lg:max-h-[90vh]">
+      <div className="max-w-[1200px] mx-auto w-full relative z-10 flex flex-col h-full lg:max-h-[90vh]">
         {/* Header Section */}
         <div className="mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-3xl">

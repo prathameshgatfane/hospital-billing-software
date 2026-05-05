@@ -72,8 +72,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-30 max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-24 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+      <div className="relative z-30 max-w-[1200px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-24 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* LEFT SIDE: Content */}
           <div className="lg:col-span-7 flex flex-col space-y-8 animate-in fade-in slide-in-from-left duration-1000">
@@ -90,22 +90,22 @@ const Hero = () => {
 
             {/* Heading */}
             <div className="space-y-4">
-              <h2 className="text-5xl sm:text-7xl xl:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
+              <h2 className="text-3xl sm:text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
                 Transform Your <br />
                 <span className="text-primary">Hospital Billing</span>
               </h2>
-              <p className="text-white/70 text-lg sm:text-xl max-w-xl font-medium leading-relaxed">
+              <p className="text-white/70 text-sm sm:text-lg md:text-xl max-w-xl font-medium leading-relaxed">
                 Secure, compliant billing software designed for modern healthcare systems.
                 Manage invoices, payments, and reports efficiently.
               </p>
             </div>
 
             {/* CTA Buttons - Rectangular as per screenshot */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="px-10 py-5 bg-white text-black font-bold text-sm uppercase tracking-widest transition-all hover:bg-primary hover:text-white border-2 border-white">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
+              <button className="px-6 sm:px-10 py-3.5 sm:py-5 bg-white text-black font-bold text-xs sm:text-sm uppercase tracking-widest transition-all hover:bg-primary hover:text-white border-2 border-white text-center">
                 Let's Connect
               </button>
-              <button className="px-10 py-5 bg-transparent text-white font-bold text-sm uppercase tracking-widest transition-all hover:bg-white hover:text-black border-2 border-white">
+              <button className="px-6 sm:px-10 py-3.5 sm:py-5 bg-transparent text-white font-bold text-xs sm:text-sm uppercase tracking-widest transition-all hover:bg-white hover:text-black border-2 border-white text-center">
                 Get Started
               </button>
             </div>

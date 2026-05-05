@@ -3,7 +3,7 @@ import React from 'react';
 const TrustedBy = () => {
   return (
     <section className="bg-[#212121] py-20 px-6">
-      <div className="max-w-[1440px] mx-auto text-center">
+      <div className="max-w-[1200px] mx-auto text-center">
         {/* Heading */}
         <h2 className="text-xl md:text-3xl font-bold text-white tracking-tight leading-tight">
           Trusted by leading healthcare practices <br className="hidden md:block" /> across the region
