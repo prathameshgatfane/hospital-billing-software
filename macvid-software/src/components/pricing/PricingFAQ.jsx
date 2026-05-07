@@ -69,13 +69,13 @@ const PricingFAQ = () => {
   };
 
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] py-24 sm:py-32 px-6 sm:px-12 border-t border-gray-100 dark:border-white/5 transition-colors duration-500">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] py-20 sm:py-24 lg:py-32 px-4 border-t border-gray-100 dark:border-white/5 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           
           {/* Left Side: Big Text */}
           <div className="lg:w-1/3 w-full lg:sticky lg:top-32">
-            <h2 className="text-[5rem] sm:text-[7rem] lg:text-[8rem] font-black text-[#C70000] tracking-tighter leading-none m-0">
+            <h2 className="text-6xl sm:text-7xl lg:text-8xl font-black text-[#C70000] tracking-tighter leading-none m-0">
               FAQs
             </h2>
           </div>

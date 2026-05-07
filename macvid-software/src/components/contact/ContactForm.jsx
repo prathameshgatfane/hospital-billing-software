@@ -69,8 +69,8 @@ const InfoBlock = ({ icon: Icon, title, text, link }) => (
 
 const ContactForm = () => {
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] pb-24 sm:pb-32 px-6 sm:px-12 transition-colors duration-500">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] py-16 sm:py-20 lg:py-24 px-4 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] border border-gray-200 dark:border-white/5 overflow-hidden shadow-2xl flex flex-col lg:row lg:flex-row transition-all duration-500 min-h-[700px]">
           
           {/* Left Column: Info & Sidebar */}

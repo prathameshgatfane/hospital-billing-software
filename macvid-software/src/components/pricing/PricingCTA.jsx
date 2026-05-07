@@ -2,8 +2,8 @@ import React from 'react';
 
 const PricingCTA = () => {
   return (
-    <section className="bg-[#212121] py-24 sm:py-32 px-6 sm:px-12">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-[#212121] py-20 sm:py-24 lg:py-32 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="relative bg-[#C70000] rounded-[2.5rem] p-10 sm:p-20 overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-12 group">
 
           {/* Decorative Concentric Circles (SVG Effect) */}
@@ -16,7 +16,7 @@ const PricingCTA = () => {
 
           {/* Left Content */}
           <div className="relative z-10 w-full lg:w-3/5 text-center lg:text-left">
-            <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-tight">
               Start Your 30-Day Free Trial
             </h2>
             <p className="text-white/80 text-lg sm:text-xl font-medium max-w-xl mb-12 mx-auto lg:mx-0">

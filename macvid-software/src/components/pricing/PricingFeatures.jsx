@@ -50,10 +50,10 @@ const PricingFeatures = () => {
   ];
 
   return (
-    <section className="bg-[#212121] py-24 sm:py-32 px-6 sm:px-12 border-t border-white/5">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-[#212121] py-20 sm:py-24 lg:py-32 px-4 border-t border-white/5">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 sm:mb-24">
-          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase mb-6">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-tight">
             Everything <span className="text-[#C70000]">You Need</span>
           </h2>
           <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto font-medium leading-relaxed">

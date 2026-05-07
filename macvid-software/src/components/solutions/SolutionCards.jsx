@@ -100,8 +100,8 @@ const SolutionCards = () => {
   ];
 
   return (
-    <section className="bg-[#212121] pb-24 sm:pb-32 px-6 sm:px-12">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-[#212121] pb-20 sm:pb-24 lg:pb-32 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {solutions.map((solution, index) => (
             <SolutionCard key={index} {...solution} />

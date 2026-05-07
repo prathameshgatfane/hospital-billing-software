@@ -10,7 +10,7 @@ const CallToAction = () => {
       </div>
 
       {/* Container with max-width */}
-      <div className="max-w-[1200px] mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 py-16 sm:py-20 lg:py-24 relative z-10">
         <div className="max-w-5xl mx-auto relative group">
           
           {/* Soft Glow Shadow Layer */}

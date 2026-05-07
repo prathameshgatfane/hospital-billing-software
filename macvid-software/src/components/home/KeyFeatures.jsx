@@ -65,12 +65,12 @@ const features = [
 
 const KeyFeatures = () => {
   return (
-    <section className="bg-[#212121] lg:h-screen lg:min-h-[800px] py-12 sm:py-16 md:py-20 px-4 md:px-12 lg:px-20 relative overflow-hidden flex flex-col justify-center">
+    <section className="bg-[#212121] py-16 sm:py-20 lg:py-24 px-4 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
 
-      <div className="max-w-[1200px] mx-auto w-full relative z-10 flex flex-col h-full lg:max-h-[90vh]">
+      <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col h-full">
         {/* Header Section */}
         <div className="mb-8 md:mb-12 lg:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-3xl">

@@ -59,7 +59,7 @@ const FeaturesHero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden flex flex-col pt-32 sm:pt-40 pb-10 sm:pb-20">
+    <section className="relative min-h-[800px] lg:min-h-screen bg-black overflow-hidden flex flex-col pt-32 sm:pt-40 pb-16 sm:pb-24">
       {/* Background with split aesthetic */}
       <div className="absolute inset-0 z-0 flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/2 h-full relative">
@@ -73,7 +73,7 @@ const FeaturesHero = () => {
         <div className="w-full sm:w-1/2 h-full bg-[#1a1a1a]"></div>
       </div>
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-12 lg:px-16 w-full flex-grow flex flex-col">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow flex flex-col">
         {/* Main Hero Text */}
         <div className="text-right ml-auto mt-12 sm:mt-20">
           <div className="text-xs sm:text-sm font-bold text-gray-400 uppercase tracking-[0.4em] mb-4 flex gap-8 justify-end">

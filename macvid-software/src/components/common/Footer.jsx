@@ -49,13 +49,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark text-white relative overflow-hidden pt-16 pb-32 sm:pb-40">
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
+    <footer className="bg-dark text-white relative overflow-hidden py-16 sm:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Link to="/">
               <img src={logo} alt="Macvid" className="h-14 md:h-20 mb-6" />
             </Link>
@@ -64,11 +64,10 @@ const Footer = () => {
             </p>
 
             {/* Social Icons */}
-            <div className="flex gap-5">
+            <div className="flex gap-5 justify-center lg:justify-start">
               {['linkedin', 'twitter', 'facebook', 'instagram'].map((social) => (
                 <a key={social} href="#" className="text-white/50 hover:text-primary transition-all duration-300 transform hover:scale-110">
                   <div className="w-5 h-5 capitalize">
-                    {/* Placeholder for actual icons, using text labels for now */}
                     <span className="text-[10px] font-bold border border-white/20 p-1 rounded uppercase tracking-tighter">
                       {social.substring(0, 2)}
                     </span>
@@ -80,7 +79,7 @@ const Footer = () => {
 
           {/* Links Columns */}
           {footerLinks.map((section) => (
-            <div key={section.title} className="lg:col-span-1">
+            <div key={section.title} className="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left">
               <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-6">
                 {section.title}
               </h4>
@@ -101,11 +100,11 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
           <p className="text-white/40 text-[10px] sm:text-xs font-medium tracking-wide">
             © 2025 MAKWID SOFTWARE. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex items-center gap-2 text-white/40 text-[10px] sm:text-xs font-medium">
+          <div className="flex items-center justify-center lg:justify-end gap-2 text-white/40 text-[10px] sm:text-xs font-medium">
             <span>MADE WITH</span>
             <span className="text-primary animate-pulse">❤️</span>
             <span>BY CLICK INNOVATE PVT LTD</span>

@@ -3,8 +3,8 @@ import expertsImage from "../../assets/india-experts.png";
 
 const IndiaExpertise = () => {
   return (
-    <section className="bg-[#212121] py-24 px-4 md:px-12 lg:px-20 min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="max-w-[1200px] mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+    <section className="bg-[#212121] py-20 sm:py-24 lg:py-32 px-4 flex items-center justify-center overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
         {/* Left Side: Content */}
         <div className="flex-1 max-w-2xl animate-in fade-in slide-in-from-left duration-1000">

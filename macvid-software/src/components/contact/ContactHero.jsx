@@ -78,14 +78,14 @@ const ContactHero = () => {
   ];
 
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] py-24 sm:py-32 px-6 sm:px-12 transition-colors duration-500">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] pt-32 sm:pt-40 pb-16 px-4 sm:px-6 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20 sm:mb-24">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-gray-900 dark:text-white tracking-tighter uppercase mb-6 leading-none">
+        <div className="text-center mb-16 sm:mb-20">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white tracking-tighter uppercase mb-6 leading-none">
             Get in <span className="text-[#C70000]">Touch</span>
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 text-lg sm:text-xl font-medium max-w-2xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg font-medium max-w-2xl mx-auto">
             We're here to help with your hospital billing needs
           </p>
         </div>

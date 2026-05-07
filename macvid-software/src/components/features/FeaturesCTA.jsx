@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeaturesCTA = () => {
   return (
-    <section className="bg-[#C70000] py-20 sm:py-32 px-6 sm:px-12 relative overflow-hidden">
+    <section className="bg-[#C70000] py-20 sm:py-24 lg:py-32 px-4 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none overflow-hidden">
         <svg viewBox="0 0 1000 1000" className="w-full h-full" preserveAspectRatio="none">
@@ -10,8 +10,8 @@ const FeaturesCTA = () => {
         </svg>
       </div>
 
-      <div className="max-w-[1200px] mx-auto relative z-10 text-center">
-        <h2 className="text-4xl sm:text-7xl font-black text-white tracking-tighter uppercase mb-10 leading-tight">
+      <div className="max-w-7xl mx-auto relative z-10 text-center">
+        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tighter uppercase mb-10 leading-tight">
           Ready to Experience <br className="hidden sm:block" />
           These Features?
         </h2>

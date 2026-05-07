@@ -171,14 +171,14 @@ const PricingSection = () => {
   return (
     <div className="relative">
       {/* Hero Section - Near full screen, bg-[#212121] */}
-      <section className="bg-[#212121] min-h-[90vh] sm:min-h-screen relative flex flex-col px-6 sm:px-12">
+      <section className="bg-[#212121] min-h-[85vh] sm:min-h-screen relative flex flex-col pt-32 sm:pt-40 px-4 sm:px-6">
         {/* Centered Content Area */}
-        <div className="max-w-[1200px] mx-auto w-full flex-1 flex flex-col justify-center items-center text-center pb-[280px] sm:pb-[320px] lg:pb-[350px]">
-          <h1 className="text-4xl sm:text-7xl font-black text-white tracking-tighter uppercase mb-6 leading-tight">
+        <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center items-center text-center pb-[240px] sm:pb-[280px] lg:pb-[300px]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-tight">
             Pricing plans <span className="text-[#C70000]">for</span> <br className="hidden sm:block" />
             every need
           </h1>
-          <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto font-medium mb-12">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-medium mb-12">
             The most affordable hospital billing software.
           </p>
 
@@ -198,9 +198,9 @@ const PricingSection = () => {
         </div>
 
         {/* Cards anchored at bottom of hero, overlapping into dark section */}
-        <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 z-20 px-6 sm:px-12">
-          <div className="max-w-[1200px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 z-20 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {plans[billingCycle].map((plan, index) => (
                 <PricingCard key={index} {...plan} />
               ))}
@@ -210,7 +210,7 @@ const PricingSection = () => {
       </section>
 
       {/* Dark Section - provides background behind lower half of cards */}
-      <section className="bg-[#212121] pt-[320px] sm:pt-[380px] lg:pt-[420px] pb-24 sm:pb-40">
+      <section className="bg-[#212121] pt-[280px] sm:pt-[320px] lg:pt-[350px] pb-24 sm:pb-32">
       </section>
     </div>
   );

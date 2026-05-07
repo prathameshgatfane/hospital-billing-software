@@ -63,13 +63,13 @@ const AdvancedCapabilities = () => {
   ];
 
   return (
-    <section className="bg-[#212121] py-16 sm:py-24 px-4 sm:px-12 min-h-screen flex flex-col justify-center">
-      <div className="max-w-[1280px] mx-auto w-full">
+    <section className="bg-[#212121] py-16 sm:py-24 px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-6xl font-black text-white tracking-tighter uppercase mb-4">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-4 leading-tight">
             Advanced <span className="text-red-700">Capabilities</span>
           </h2>
-          <p className="text-gray-400 text-base sm:text-xl max-w-2xl font-medium">
+          <p className="text-gray-400 text-base sm:text-xl max-w-2xl font-medium mx-auto">
             Additional features that make Mapvon the complete solution for healthcare institutions.
           </p>
         </div>

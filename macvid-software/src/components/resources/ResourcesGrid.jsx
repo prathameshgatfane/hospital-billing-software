@@ -88,8 +88,8 @@ const ResourcesGrid = () => {
   ];
 
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] pb-24 sm:pb-32 px-6 sm:px-12 transition-colors duration-500">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] py-16 sm:py-20 lg:py-24 px-4 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {resourceData.map((section, index) => (
             <ResourceSection key={index} {...section} />

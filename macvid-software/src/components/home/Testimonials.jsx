@@ -34,11 +34,11 @@ const TestimonialCard = ({ img, name, className }) => (
 
 const Testimonials = () => {
   return (
-    <section className="relative bg-gray-50 dark:bg-[#212121] min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 transition-colors duration-500">
+    <section className="relative bg-gray-50 dark:bg-[#212121] flex flex-col items-center justify-center overflow-hidden py-20 sm:py-24 lg:py-32 transition-colors duration-500">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full -z-0"></div>
 
-      <div className="w-full max-w-[1280px] mx-auto relative z-10 px-4 flex flex-col items-center">
+      <div className="w-full max-w-7xl mx-auto relative z-10 px-4 flex flex-col items-center">
         
         {/* Arching Grid of 13 Images */}
         <div className="flex items-start justify-center gap-4 md:gap-8 w-full overflow-hidden px-4 mb-20">
@@ -90,7 +90,7 @@ const Testimonials = () => {
         <div className="relative z-30 text-center max-w-4xl mx-auto px-6">
           <div className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-6">Testimonials</div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8 tracking-tighter leading-[1.1] transition-colors duration-500">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-8 tracking-tighter leading-[1.1] transition-colors duration-500">
             Trusted by leading clinics <br className="hidden sm:block" />
             <span className="text-gray-500 italic">and healthcare experts</span>
           </h2>

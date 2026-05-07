@@ -2,8 +2,8 @@ import React from 'react';
 
 const ResourcesCTA = () => {
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] py-24 sm:py-32 px-6 sm:px-12 transition-colors duration-500">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] py-16 sm:py-20 lg:py-24 px-4 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="relative bg-[#C70000] rounded-[2.5rem] p-10 sm:p-20 overflow-hidden shadow-2xl flex flex-col items-center text-center gap-8 group">
           
           {/* Decorative Concentric Circles (matching our design language) */}
@@ -16,7 +16,7 @@ const ResourcesCTA = () => {
 
           {/* Content */}
           <div className="relative z-10 w-full max-w-2xl flex flex-col items-center">
-            <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase mb-4 leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-4 leading-tight">
               Need Additional Help?
             </h2>
             <p className="text-white/80 text-lg sm:text-xl font-medium mb-12">

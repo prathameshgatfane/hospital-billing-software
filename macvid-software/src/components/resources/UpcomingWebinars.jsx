@@ -79,14 +79,14 @@ const UpcomingWebinars = () => {
   ];
 
   return (
-    <section className="bg-gray-50 dark:bg-[#212121] pb-24 sm:pb-32 px-6 sm:px-12 transition-colors duration-500">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="bg-gray-50 dark:bg-[#212121] py-20 sm:py-24 lg:py-32 px-4 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-10 h-10 bg-[#C70000]/10 rounded-xl flex items-center justify-center text-[#C70000]">
               <CalendarIcon className="w-6 h-6" />
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black text-gray-900 dark:text-white tracking-tighter uppercase leading-none">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white tracking-tighter uppercase leading-tight">
               Upcoming <span className="text-[#C70000]">Webinars</span>
             </h2>
           </div>

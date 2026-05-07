@@ -45,7 +45,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
+    <div className="relative min-h-[800px] lg:min-h-screen flex items-center overflow-hidden bg-black pt-32 lg:pt-40">
       {/* Background Video Carousel */}
       <div className="absolute inset-0 z-0">
         {videos.map((vid, index) => (
@@ -66,13 +66,13 @@ const Hero = () => {
 
         {/* Massive Background Text - Matching "BUILDIN" in screenshot */}
         <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none overflow-hidden">
-          <h1 className="text-[25vw] font-black text-white/[0.12] leading-none tracking-tighter uppercase whitespace-nowrap select-none">
+          <h1 className="text-[20vw] font-black text-white/[0.08] leading-none tracking-tighter uppercase whitespace-nowrap select-none">
             MAKWID
           </h1>
         </div>
       </div>
 
-      <div className="relative z-30 max-w-[1200px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-12 lg:py-24 w-full">
+      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* LEFT SIDE: Content */}
@@ -90,7 +90,7 @@ const Hero = () => {
 
             {/* Heading */}
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tighter">
                 Transform Your <br />
                 <span className="text-primary">Hospital Billing</span>
               </h2>
