@@ -34,7 +34,7 @@ const ResourcesCTA = () => {
 
             <div className="flex flex-col gap-2">
               <p className="text-white font-bold text-sm sm:text-base tracking-wide">
-                Email: <span className="text-white/70">mapvon1@gmail.com</span> | Phone: <span className="text-white/70">9021199661</span>
+                Email: <span className="text-white/70">makvid1@gmail.com</span> | Phone: <span className="text-white/70">9021199661</span>
               </p>
               <p className="text-white font-black text-xs uppercase tracking-[0.3em] opacity-60">
                 Support Hours: 24/7

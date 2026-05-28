@@ -17,30 +17,30 @@ const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500;600&display=swap');
 
   ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-thumb { background: #F3F4F6; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb { background: var(--sidebar-border); border-radius: 99px; }
   ::-webkit-scrollbar-track { background: transparent; }
 
   /* top-level nav link */
   .sb-link {
     display: flex; align-items: center; gap: 10px;
     padding: 9px 14px; border-radius: 10px;
-    font-size: 15px; font-weight: 500; color: #6B7280;
+    font-size: 15px; font-weight: 500; color: var(--sidebar-text);
     background: transparent; text-decoration: none;
     transition: color 0.1s, background 0.1s;
     position: relative; margin-bottom: 2px;
     font-family: 'DM Sans', sans-serif;
   }
-  .sb-link:hover:not(.active) { color: #111827; background: #F9FAFB; }
+  .sb-link:hover:not(.active) { color: var(--text-color); background: var(--sidebar-hover); }
   .sb-link.active {
-    color: #DC2626 !important;
-    background: #FEF2F2 !important;
+    color: var(--sidebar-active-text) !important;
+    background: var(--sidebar-active-bg) !important;
     font-weight: 700;
   }
   /* red left bar — only on active top-level links */
   .sb-link.active::before {
     content: ''; position: absolute;
     left: 0; top: 22%; bottom: 22%;
-    width: 3px; background: #DC2626;
+    width: 3px; background: var(--sidebar-active-text);
     border-radius: 0 3px 3px 0;
   }
 
@@ -48,15 +48,15 @@ const CSS = `
   .sb-sub {
     display: flex; align-items: center; gap: 9px;
     padding: 6px 12px 6px 40px; border-radius: 8px;
-    font-size: 14px; font-weight: 500; color: #9CA3AF;
+    font-size: 14px; font-weight: 500; color: var(--text-muted);
     background: transparent; text-decoration: none;
     transition: color 0.1s, background 0.1s;
     margin-bottom: 1px; font-family: 'DM Sans', sans-serif;
   }
-  .sb-sub:hover:not(.active) { color: #374151; background: #F9FAFB; }
+  .sb-sub:hover:not(.active) { color: var(--text-color); background: var(--sidebar-hover); }
   .sb-sub.active {
-    color: #DC2626 !important;
-    background: #FEF2F2 !important;
+    color: var(--sidebar-active-text) !important;
+    background: var(--sidebar-active-bg) !important;
     font-weight: 700;
   }
 
@@ -64,25 +64,25 @@ const CSS = `
   .sb-trigger {
     display: flex; align-items: center; justify-content: space-between;
     width: 100%; padding: 9px 14px; border-radius: 10px; border: none;
-    font-size: 15px; font-weight: 600; color: #6B7280;
+    font-size: 15px; font-weight: 600; color: var(--sidebar-text);
     background: transparent; cursor: pointer; margin-bottom: 2px;
     font-family: 'DM Sans', sans-serif; transition: color 0.1s, background 0.1s;
   }
-  .sb-trigger:hover { color: #111827; background: #F9FAFB; }
+  .sb-trigger:hover { color: var(--text-color); background: var(--sidebar-hover); }
   /* when a child is active AND closed → highlight trigger */
-  .sb-trigger.child-active { color: #DC2626; background: #FEF2F2; }
+  .sb-trigger.child-active { color: var(--sidebar-active-text); background: var(--sidebar-active-bg); }
   /* when open, revert to neutral hover look */
-  .sb-trigger.open { color: #111827; background: #F9FAFB; }
+  .sb-trigger.open { color: var(--text-color); background: var(--sidebar-hover); }
 
   /* logout icon button */
   .sb-logout {
     width: 30px; height: 30px;
     display: flex; align-items: center; justify-content: center;
-    background: transparent; border: 1px solid #F3F4F6;
+    background: transparent; border: 1px solid var(--sidebar-border);
     border-radius: 8px; cursor: pointer; flex-shrink: 0;
     transition: background 0.1s, border-color 0.1s;
   }
-  .sb-logout:hover { background: #FEF2F2; border-color: #FECACA; }
+  .sb-logout:hover { background: var(--sidebar-active-bg); border-color: var(--sidebar-active-text); }
 `;
 
 /* ─── LinkItem ────────────────────────────────────────────────────────── */
@@ -212,14 +212,14 @@ const SubAdminSidebar = () => {
 
       <aside style={{
         width: 256, flexShrink: 0,
-        background: '#fff', borderRight: '1px solid #F3F4F6',
+        background: 'var(--sidebar-bg)', borderRight: '1px solid var(--sidebar-border)',
         display: 'flex', flexDirection: 'column',
         height: '100vh', position: 'sticky', top: 0,
         fontFamily: "'DM Sans', sans-serif", zIndex: 50,
       }}>
 
         {/* ── Brand ── */}
-        <div style={{ padding: '20px 18px 16px', borderBottom: '1px solid #F3F4F6' }}>
+        <div style={{ padding: '20px 18px 16px', borderBottom: '1px solid var(--sidebar-border)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             {/* red cross logo */}
             <div style={{
@@ -231,12 +231,12 @@ const SubAdminSidebar = () => {
               <div style={{ width: 3, height: 15, background: '#fff', borderRadius: 2, position: 'absolute' }} />
             </div>
             <div>
-              <h1 style={{ fontSize: 16, fontWeight: 800, color: '#111827', margin: 0, letterSpacing: '-0.03em', lineHeight: 1.1 }}>MAPVON</h1>
-              <p style={{ fontSize: 9, color: '#9CA3AF', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", margin: 0 }}>Sub-Admin Portal</p>
+              <h1 style={{ fontSize: 16, fontWeight: 800, color: 'var(--text-color)', margin: 0, letterSpacing: '-0.03em', lineHeight: 1.1 }}>MAKVID</h1>
+              <p style={{ fontSize: 9, color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", margin: 0 }}>Sub-Admin Portal</p>
             </div>
             <div style={{ marginLeft: 'auto', position: 'relative', cursor: 'pointer', padding: 4 }}>
-              <Bell size={15} color="#9CA3AF" />
-              <span style={{ position: 'absolute', top: 2, right: 2, width: 6, height: 6, background: '#DC2626', borderRadius: '50%', border: '1.5px solid #fff' }} />
+              <Bell size={15} color="var(--text-muted)" />
+              <span style={{ position: 'absolute', top: 2, right: 2, width: 6, height: 6, background: '#DC2626', borderRadius: '50%', border: '1.5px solid var(--sidebar-bg)' }} />
             </div>
           </div>
         </div>
@@ -257,20 +257,20 @@ const SubAdminSidebar = () => {
         </nav>
 
         {/* ── Footer ── */}
-        <div style={{ borderTop: '1px solid #F3F4F6', padding: '13px 14px' }}>
+        <div style={{ borderTop: '1px solid var(--sidebar-border)', padding: '13px 14px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{
               width: 34, height: 34, borderRadius: '50%', flexShrink: 0,
-              background: '#FEE2E2', color: '#DC2626',
+              background: 'var(--sidebar-active-bg)', color: 'var(--sidebar-active-text)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontWeight: 700, fontSize: 12, fontFamily: "'DM Mono', monospace",
             }}>SA</div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#111827', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>System Admin</p>
-              <p style={{ fontSize: 10, color: '#9CA3AF', margin: 0, fontFamily: "'DM Mono', monospace", whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Reception & Billing</p>
+              <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-color)', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>System Admin</p>
+              <p style={{ fontSize: 10, color: 'var(--text-muted)', margin: 0, fontFamily: "'DM Mono', monospace", whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Reception & Billing</p>
             </div>
             <button className="sb-logout" title="Sign out">
-              <LogOut size={13} color="#9CA3AF" />
+              <LogOut size={13} color="var(--text-muted)" />
             </button>
           </div>
         </div>

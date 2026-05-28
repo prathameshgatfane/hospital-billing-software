@@ -94,7 +94,7 @@ const Home = () => {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Find the Best Hospitals Near You</h1>
           <p className="text-xl text-red-100 max-w-2xl mx-auto mb-8">
-            Discover verified healthcare facilities powered by Mapvon.
+            Discover verified healthcare facilities powered by Makvid.
           </p>
           
           <div className="max-w-xl mx-auto bg-white p-2 rounded-xl shadow-lg flex items-center">

@@ -57,8 +57,8 @@ const ContactHero = () => {
     {
       title: "Email",
       icon: EmailIcon,
-      info1: "mapvon1@gmail.com",
-      info2: "mapvon1@gmail.com",
+      info1: "makvid1@gmail.com",
+      info2: "makvid1@gmail.com",
       footer: "Response within 2 business hours"
     },
     {

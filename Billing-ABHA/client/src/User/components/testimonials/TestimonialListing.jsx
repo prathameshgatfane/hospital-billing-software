@@ -66,7 +66,7 @@ const TestimonialListing = () => {
       hospital: "City Hospital, Amravati",
       initials: "RK",
       category: "Hospitals",
-      quote: "Mapvon reduced our billing processing time by 70% and improved accuracy by 95%. The implementation was seamless, and their support team is exceptional."
+      quote: "Makvid reduced our billing processing time by 70% and improved accuracy by 95%. The implementation was seamless, and their support team is exceptional."
     },
     {
       name: "Priya Sharma",
@@ -82,7 +82,7 @@ const TestimonialListing = () => {
       hospital: "Lifeline Hospital",
       initials: "AP",
       category: "Hospitals",
-      quote: "Our revenue increased by 25% in the first quarter after implementing Mapvon. The analytics dashboard provides valuable insights."
+      quote: "Our revenue increased by 25% in the first quarter after implementing Makvid. The analytics dashboard provides valuable insights."
     },
     {
       name: "Dr. Sneha Deshmukh",
@@ -90,7 +90,7 @@ const TestimonialListing = () => {
       hospital: "Sneha Clinic",
       initials: "SD",
       category: "Clinics",
-      quote: "As a small clinic, we needed an affordable solution. Mapvon's Basic plan is perfect for our needs. Very user-friendly!"
+      quote: "As a small clinic, we needed an affordable solution. Makvid's Basic plan is perfect for our needs. Very user-friendly!"
     },
     {
       name: "Rohit Verma",

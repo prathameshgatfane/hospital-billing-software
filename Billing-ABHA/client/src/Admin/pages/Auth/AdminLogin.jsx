@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
               value={formData.email}
               onChange={handleChange}
               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500"
-              placeholder="admin@mapvon.com"
+              placeholder="admin@makvid.com"
             />
           </div>
 

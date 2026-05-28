@@ -6,7 +6,7 @@ const TermsOfService = () => {
   const effectiveDate = "January 15, 2024";
   
   const importantPoints = [
-    "By using Mapvon, you agree to these Terms of Service",
+    "By using Makvid, you agree to these Terms of Service",
     "You retain ownership of your hospital data",
     "We process data in compliance with healthcare regulations",
     "Account security is your responsibility"
@@ -31,7 +31,7 @@ const TermsOfService = () => {
             <span className="text-sm font-medium">Effective: {effectiveDate}</span>
           </div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            These Terms of Service govern your use of Mapvon's hospital management platform. Please read them carefully.
+            These Terms of Service govern your use of Makvid's hospital management platform. Please read them carefully.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ const TermsOfService = () => {
               </div>
               <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  By accessing or using <span className="font-semibold text-blue-700">Mapvon's</span> hospital billing and financial management platform ("Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                  By accessing or using <span className="font-semibold text-blue-700">Makvid's</span> hospital billing and financial management platform ("Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
                 </p>
                 <div className="bg-white p-4 rounded-lg border border-blue-100">
                   <p className="text-gray-700 text-sm">
@@ -169,7 +169,7 @@ const TermsOfService = () => {
                     },
                     {
                       title: "Unauthorized Access",
-                      content: "You must immediately notify Mapvon of any unauthorized use of your account or any other security breach."
+                      content: "You must immediately notify Makvid of any unauthorized use of your account or any other security breach."
                     },
                     {
                       title: "Single Organization",
@@ -203,7 +203,7 @@ const TermsOfService = () => {
                     <h3 className="font-semibold text-gray-900 mb-3">Data Ownership</h3>
                     <div className="bg-white p-4 rounded-lg border border-red-100">
                       <p className="text-gray-700">
-                        You retain all ownership rights to your hospital data, including patient information, billing records, and operational data. Mapvon acts as a data processor and only processes your data to provide the Services in accordance with these Terms and our Privacy Policy.
+                        You retain all ownership rights to your hospital data, including patient information, billing records, and operational data. Makvid acts as a data processor and only processes your data to provide the Services in accordance with these Terms and our Privacy Policy.
                       </p>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ const TermsOfService = () => {
               <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg border border-gray-100">
-                    <h3 className="font-semibold text-gray-900 mb-2">By Mapvon</h3>
+                    <h3 className="font-semibold text-gray-900 mb-2">By Makvid</h3>
                     <p className="text-gray-700 text-sm">
                       We may suspend or terminate your access to the Services immediately, without prior notice, if we believe you have violated these Terms, pose a security risk, or if required by law. In most cases, we will provide you with notice and an opportunity to remedy the violation.
                     </p>
@@ -306,12 +306,12 @@ const TermsOfService = () => {
               <div className="bg-indigo-50 p-5 rounded-lg border border-indigo-200">
                 <div className="bg-white p-5 rounded-lg border border-indigo-100">
                   <p className="text-gray-700 mb-4">
-                    To the maximum extent permitted by law, Mapvon shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising from your use of the Services.
+                    To the maximum extent permitted by law, Makvid shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising from your use of the Services.
                   </p>
                   <div className="text-sm text-gray-600 bg-indigo-50 p-3 rounded border border-indigo-100">
                     <p className="font-medium mb-1">Important Note:</p>
                     <p>
-                      This limitation applies even if Mapvon has been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion or limitation of certain damages, so this limitation may not apply to you.
+                      This limitation applies even if Makvid has been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion or limitation of certain damages, so this limitation may not apply to you.
                     </p>
                   </div>
                 </div>
@@ -341,16 +341,16 @@ const TermsOfService = () => {
                   </div>
                   <div className="space-y-3">
                     <a 
-                      href="mailto:legal@mapvon.com" 
+                      href="mailto:legal@makvid.com" 
                       className="block text-lg font-medium text-cyan-700 hover:text-cyan-800"
                     >
-                      legal@mapvon.com
+                      legal@makvid.com
                     </a>
                     <a 
-                      href="mailto:support@mapvon.com" 
+                      href="mailto:support@makvid.com" 
                       className="block text-lg font-medium text-cyan-700 hover:text-cyan-800"
                     >
-                      support@mapvon.com
+                      support@makvid.com
                     </a>
                     <p className="text-gray-600 text-sm">
                       We typically respond to legal inquiries within 3-5 business days.
@@ -370,7 +370,7 @@ const TermsOfService = () => {
                   These Terms of Service are effective as of {effectiveDate}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
-                  By using Mapvon, you acknowledge that you have read and agree to these Terms.
+                  By using Makvid, you acknowledge that you have read and agree to these Terms.
                 </p>
               </div>
               <div className="flex items-center gap-4">

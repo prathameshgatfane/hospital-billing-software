@@ -103,10 +103,10 @@ const Dashboard = () => {
           </div>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={billingData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
               <XAxis dataKey="month" />
               <YAxis />
-              <Tooltip />
+              <Tooltip contentStyle={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)', color: 'var(--text-color)' }} itemStyle={{ color: 'var(--text-color)' }} labelStyle={{ color: 'var(--text-color)' }} />
               <Legend />
               <Bar dataKey="billed" name="Amount Billed" fill="#3b82f6" radius={[4, 4, 0, 0]} />
               <Bar dataKey="collected" name="Amount Collected" fill="#10b981" radius={[4, 4, 0, 0]} />
@@ -133,7 +133,7 @@ const Dashboard = () => {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip />
+                <Tooltip contentStyle={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)', color: 'var(--text-color)' }} itemStyle={{ color: 'var(--text-color)' }} labelStyle={{ color: 'var(--text-color)' }} />
               </PieChart>
             </ResponsiveContainer>
             <div className="space-y-4 ml-8">

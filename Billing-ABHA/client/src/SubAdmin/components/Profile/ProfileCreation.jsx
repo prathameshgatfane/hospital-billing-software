@@ -935,7 +935,7 @@ const handleFileUpload = async (field, files) => {
                       
                       <div className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <p>You understand that Mapvon reserves the right to verify submitted documents.</p>
+                        <p>You understand that Makvid reserves the right to verify submitted documents.</p>
                       </div>
                     </div>
                     

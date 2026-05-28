@@ -19,8 +19,14 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: white !important;
+    -webkit-text-fill-color: currentColor !important;
 }
+
+/* Set default text color for form elements to prevent inheriting global white text or default transparent styles */
+input, select, textarea {
+    color: #111827;
+}
+
 
 @keyframes marquee {
   0% { transform: translateX(0); }

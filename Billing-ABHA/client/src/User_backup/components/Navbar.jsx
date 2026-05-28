@@ -14,7 +14,7 @@ const UserNavbar = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
               <FileText className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">Mapvon</span>
+            <span className="text-2xl font-bold text-gray-900">Makvid</span>
           </div>
 
           <div className="flex items-center space-x-8">

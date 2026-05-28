@@ -27,7 +27,7 @@ const Hero = () => {
 
   useEffect(() => {
     const currentVideo = videoRefs.current[currentVideoIndex];
-    
+
     if (currentVideo) {
       const playPromise = currentVideo.play();
 
@@ -96,7 +96,7 @@ const Hero = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
               <span className="text-primary text-xs font-bold uppercase tracking-wider">
-                Amravati's First Modern Billing Software
+                Maharashtra's & Amravati's First Modern Billing Software
               </span>
             </div>
 

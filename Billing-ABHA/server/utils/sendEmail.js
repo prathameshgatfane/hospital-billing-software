@@ -15,16 +15,16 @@ const transporter = nodemailer.createTransport({
 
 export const sendOtpEmail = async (to, otp) => {
   await transporter.sendMail({
-    from: `"MAPVON PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
+    from: `"MAKVID PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
     to,
-    subject: "Email Verification OTP | MAPVON Billing",
+    subject: "Email Verification OTP | MAKVID Billing",
     html: `
     <div style="max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;
                 border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
       
       <!-- HEADER -->
       <div style="background:#0D0D46;color:#ffffff;padding:16px 24px;">
-        <h2 style="margin:0;font-size:20px;">MAPVON PVT LTD</h2>
+        <h2 style="margin:0;font-size:20px;">MAKVID PVT LTD</h2>
         <p style="margin:4px 0 0;font-size:14px;opacity:0.9;">
           Secure Billing & Healthcare Management
         </p>
@@ -35,7 +35,7 @@ export const sendOtpEmail = async (to, otp) => {
         <h3 style="margin-top:0;">Email Verification</h3>
 
         <p style="font-size:15px;">
-          Thank you for registering with <strong>MAPVON Billing Software</strong>.
+          Thank you for registering with <strong>MAKVID Billing Software</strong>.
           Please use the OTP below to verify your email address:
         </p>
 
@@ -65,8 +65,8 @@ export const sendOtpEmail = async (to, otp) => {
 
         <p style="font-size:13px;color:#6B7280;">
           Need help? Contact our support team at
-          <a href="mailto:support@mapvon.com" style="color:#2563eb;text-decoration:none;">
-            support@mapvon.com
+          <a href="mailto:support@makvid.com" style="color:#2563eb;text-decoration:none;">
+            support@makvid.com
           </a>
         </p>
       </div>
@@ -74,7 +74,7 @@ export const sendOtpEmail = async (to, otp) => {
       <!-- FOOTER -->
       <div style="background:#F9FAFB;padding:16px;text-align:center;
                   font-size:12px;color:#6B7280;">
-        © ${new Date().getFullYear()} MAPVON PVT LTD. All rights reserved.
+        © ${new Date().getFullYear()} MAKVID PVT LTD. All rights reserved.
       </div>
 
     </div>
@@ -87,16 +87,16 @@ export const sendOtpEmail = async (to, otp) => {
    =========================== */
 export const sendApprovalEmail = async ({ to, hospitalName, doctorName }) => {
   await transporter.sendMail({
-    from: `"MAPVON PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
+    from: `"MAKVID PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
     to,
-    subject: "Hospital Profile Approved | MAPVON Billing",
+    subject: "Hospital Profile Approved | MAKVID Billing",
     html: `
       <div style="max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;
                   border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
 
         <!-- HEADER -->
         <div style="background:#0D0D46;color:#ffffff;padding:16px 24px;">
-          <h2 style="margin:0;">MAPVON PVT LTD</h2>
+          <h2 style="margin:0;">MAKVID PVT LTD</h2>
           <p style="margin:4px 0 0;font-size:14px;">
             Billing & Healthcare Management
           </p>
@@ -134,14 +134,14 @@ export const sendApprovalEmail = async ({ to, hospitalName, doctorName }) => {
 
           <p style="font-size:13px;color:#6B7280;">
             Regards,<br />
-            <strong>MAPVON PVT LTD – Billing Team</strong>
+            <strong>MAKVID PVT LTD – Billing Team</strong>
           </p>
         </div>
 
         <!-- FOOTER -->
         <div style="background:#F9FAFB;padding:16px;text-align:center;
                     font-size:12px;color:#6B7280;">
-          © ${new Date().getFullYear()} MAPVON PVT LTD. All rights reserved.
+          © ${new Date().getFullYear()} MAKVID PVT LTD. All rights reserved.
         </div>
 
       </div>
@@ -159,16 +159,16 @@ export const sendRejectionEmail = async ({
   reason,
 }) => {
   await transporter.sendMail({
-    from: `"MAPVON PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
+    from: `"MAKVID PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
     to,
-    subject: "Hospital Profile Rejected | MAPVON Billing",
+    subject: "Hospital Profile Rejected | MAKVID Billing",
     html: `
       <div style="max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;
                   border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
 
         <!-- HEADER -->
         <div style="background:#7C0A02;color:#ffffff;padding:16px 24px;">
-          <h2 style="margin:0;">MAPVON PVT LTD</h2>
+          <h2 style="margin:0;">MAKVID PVT LTD</h2>
           <p style="margin:4px 0 0;font-size:14px;">
             Billing & Healthcare Management
           </p>
@@ -212,14 +212,14 @@ export const sendRejectionEmail = async ({
 
           <p style="font-size:13px;color:#6B7280;">
             Regards,<br />
-            <strong>MAPVON PVT LTD – Verification Team</strong>
+            <strong>MAKVID PVT LTD – Verification Team</strong>
           </p>
         </div>
 
         <!-- FOOTER -->
         <div style="background:#F9FAFB;padding:16px;text-align:center;
                     font-size:12px;color:#6B7280;">
-          © ${new Date().getFullYear()} MAPVON PVT LTD. All rights reserved.
+          © ${new Date().getFullYear()} MAKVID PVT LTD. All rights reserved.
         </div>
 
       </div>

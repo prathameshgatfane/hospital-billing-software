@@ -28,14 +28,14 @@ const generateStaffPassword = (hospitalName) => {
 // @desc   Send credentials email to staff
 const sendStaffCredentialsEmail = async ({ to, name, hospitalName, plainPassword }) => {
   await transporter.sendMail({
-    from: `"MAPVON PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
+    from: `"MAKVID PVT LTD – Billing Software" <${process.env.EMAIL_USER}>`,
     to,
-    subject: "Your Staff Login Credentials | MAPVON Billing",
+    subject: "Your Staff Login Credentials | MAKVID Billing",
     html: `
     <div style="max-width:600px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;
                 border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
       <div style="background:#0D0D46;color:#ffffff;padding:16px 24px;">
-        <h2 style="margin:0;">MAPVON PVT LTD</h2>
+        <h2 style="margin:0;">MAKVID PVT LTD</h2>
         <p style="margin:4px 0 0;font-size:14px;opacity:0.9;">Secure Billing & Healthcare Management</p>
       </div>
       <div style="padding:24px;color:#111827;">
@@ -51,11 +51,11 @@ const sendStaffCredentialsEmail = async ({ to, name, hospitalName, plainPassword
         <hr style="margin:24px 0;border:none;border-top:1px solid #e5e7eb;" />
         <p style="font-size:13px;color:#6B7280;">
           Need help? Contact support at
-          <a href="mailto:support@mapvon.com" style="color:#2563eb;">support@mapvon.com</a>
+          <a href="mailto:support@makvid.com" style="color:#2563eb;">support@makvid.com</a>
         </p>
       </div>
       <div style="background:#F9FAFB;padding:16px;text-align:center;font-size:12px;color:#6B7280;">
-        © ${new Date().getFullYear()} MAPVON PVT LTD. All rights reserved.
+        © ${new Date().getFullYear()} MAKVID PVT LTD. All rights reserved.
       </div>
     </div>
   `,

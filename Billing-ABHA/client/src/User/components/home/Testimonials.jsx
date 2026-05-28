@@ -99,7 +99,7 @@ const Testimonials = () => {
             Learn why professionals trust Macvid to streamline their practice and complete their patient journeys.
           </p>
           
-          <button className="group relative bg-[#212121] text-white dark:bg-white dark:text-black px-10 py-4 rounded-full font-bold text-sm hover:bg-primary dark:hover:bg-primary hover:text-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4 mx-auto tracking-widest uppercase overflow-hidden">
+          <button className="group relative bg-black text-white dark:bg-white dark:text-black px-10 py-4 rounded-full font-bold text-sm hover:bg-primary dark:hover:bg-primary hover:text-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4 mx-auto tracking-widest uppercase overflow-hidden">
             <span className="relative z-10">Read Success Stories</span>
             <div className="relative z-10 w-8 h-8 rounded-full border border-white/20 dark:border-black/10 flex items-center justify-center group-hover:border-white/20 transition-all duration-500">
               <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

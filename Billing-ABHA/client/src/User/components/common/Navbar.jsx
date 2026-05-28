@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useTheme } from "../../../Common/context/ThemeContext";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  const isHome = location.pathname === "/" || location.pathname === "/billing-software";
+  const useDarkThemeNavbar = isHome && !isScrolled && !isMenuOpen;
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +43,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMenuOpen
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          useDarkThemeNavbar ? "nav-force-dark-theme " : ""
+        }${isScrolled || isMenuOpen
             ? "bg-[#212121]/95 backdrop-blur-xl shadow-lg border-b border-white/10"
             : "bg-transparent"
           }`}
@@ -108,6 +117,24 @@ const Navbar = () => {
               <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7" />
               </svg>
+            </button>
+
+            {/* Dark / Light Mode Toggle */}
+            <button
+              onClick={toggleTheme}
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              className="p-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition-all text-white flex items-center justify-center"
+              style={{ width: 36, height: 36 }}
+            >
+              {theme === 'dark' ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+                </svg>
+              )}
             </button>
 
             {/* Mobile Hamburger Icon */}

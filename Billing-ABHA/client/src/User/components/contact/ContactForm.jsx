@@ -86,7 +86,7 @@ const ContactForm = () => {
                   icon={EmailIcon} 
                   title="Chat to us" 
                   text="Our friendly team is here to help." 
-                  link="mapvon1@gmail.com" 
+                  link="makvid1@gmail.com" 
                 />
                 <InfoBlock 
                   icon={LocationIcon} 

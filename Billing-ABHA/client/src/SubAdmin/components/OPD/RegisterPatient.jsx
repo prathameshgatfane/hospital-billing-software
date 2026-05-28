@@ -12,15 +12,15 @@ import { useAuth } from '../../../Common/context/AuthContext';
 
 /* ─── Smaller Reusable UI Helpers ─── */
 const SectionTitle = ({ icon, label }) => (
-  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 18, borderBottom: '1px solid #F0F0F0', paddingBottom: 14 }}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 18, borderBottom: '1px solid var(--card-border)', paddingBottom: 14 }}>
     {icon}
-    <h2 style={{ fontSize: 14, fontWeight: 700, color: '#111827', margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{label}</h2>
+    <h2 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-color)', margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{label}</h2>
   </div>
 );
 
 const Field = ({ label, children }) => (
   <div>
-    <label style={{ display: 'block', fontSize: 10, fontWeight: 700, color: '#9CA3AF', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", marginBottom: 5 }}>
+    <label style={{ display: 'block', fontSize: 10, fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", marginBottom: 5 }}>
       {label}
     </label>
     {children}
@@ -28,14 +28,14 @@ const Field = ({ label, children }) => (
 );
 
 const card = {
-  background: '#fff', border: '1px solid #F0F0F0', borderRadius: 14,
+  background: 'var(--card-bg)', border: '1px solid var(--card-border)', borderRadius: 14,
   padding: 24, boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)',
 };
 
 const inp = {
   width: '100%', padding: '9px 13px', fontSize: 13,
-  border: '1px solid #E9ECEF', borderRadius: 8, outline: 'none',
-  background: '#FAFAFA', color: '#111827',
+  border: '1px solid var(--input-border)', borderRadius: 8, outline: 'none',
+  background: 'var(--input-bg)', color: 'var(--input-text)',
   fontFamily: "'DM Sans', sans-serif", boxSizing: 'border-box'
 };
 
@@ -178,7 +178,7 @@ const RegisterPatient = () => {
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500;600&display=swap');
-        input:focus, select:focus, textarea:focus { border-color: #DC2626 !important; background: #fff !important; }
+        input:focus, select:focus, textarea:focus { border-color: #DC2626 !important; background: var(--card-bg) !important; color: var(--input-text) !important; }
         
         @media (max-width: 1024px) {
           .rp-container { padding: 12px !important; }
@@ -190,24 +190,18 @@ const RegisterPatient = () => {
         }
       `}</style>
 
-      <div style={{ minHeight: '100vh', background: '#F9FAFB', fontFamily: "'DM Sans', sans-serif" }}>
+      <div style={{ minHeight: '100vh', background: 'var(--bg-color)', fontFamily: "'DM Sans', sans-serif" }}>
         <div className="rp-container" style={{ maxWidth: 1400, margin: '0 auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: 20 }}>
 
           {/* ── Header ── */}
           <div className="rp-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 14 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              <button
-                type="button"
-                onClick={() => navigate(fromOpdBilling ? '/subadmin/reception/opd' : -1)}
-                style={{ width: 36, height: 36, border: '1px solid #E5E7EB', borderRadius: 10, background: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6B7280', flexShrink: 0 }}
-              >
-                <ArrowLeft size={16} />
-              </button>
+
               <div>
-                <h1 style={{ fontSize: 20, fontWeight: 700, color: '#111827', margin: 0, letterSpacing: '-0.02em' }}>
+                <h1 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-color)', margin: 0, letterSpacing: '-0.02em' }}>
                   {isEditMode ? 'Update Patient' : 'Register New Patient'}
                 </h1>
-                <p style={{ fontSize: 13, color: '#9CA3AF', margin: '3px 0 0' }}>
+                <p style={{ fontSize: 13, color: 'var(--text-muted)', margin: '3px 0 0' }}>
                   {isEditMode
                     ? 'Modify an existing patient profile'
                     : fromOpdBilling
@@ -220,8 +214,8 @@ const RegisterPatient = () => {
 
             <div className="rp-btn-group" style={{ display: 'flex', gap: 10 }}>
               {!isEditMode && (
-                <button type="button" onClick={() => navigate('/subadmin/reception/opd/check-duplicate')} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', background: '#fff', border: '1px solid #E5E7EB', borderRadius: 10, fontSize: 13, fontWeight: 600, color: '#374151', cursor: 'pointer', fontFamily: "'DM Sans', sans-serif" }}>
-                  <CheckCircle2 size={14} color="#6B7280" /> Check Duplicate
+                <button type="button" onClick={() => navigate('/subadmin/reception/opd/check-duplicate')} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', background: 'var(--card-bg)', border: '1px solid var(--border-color)', borderRadius: 10, fontSize: 13, fontWeight: 600, color: 'var(--text-color)', cursor: 'pointer', fontFamily: "'DM Sans', sans-serif" }}>
+                  <CheckCircle2 size={14} color="var(--text-muted)" /> Check Duplicate
                 </button>
               )}
               <button onClick={handleSubmit} disabled={loading} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 20px', background: loading ? '#D1D5DB' : '#DC2626', color: '#fff', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', fontFamily: "'DM Sans', sans-serif", transition: 'background 0.15s' }}>

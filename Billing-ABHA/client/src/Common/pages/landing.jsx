@@ -13,7 +13,7 @@ import {
   Building
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import UserNavbar from '../../User/components/Navbar'; // Global User Navbar
+import MainLayout from '../../User/layouts/MainLayout';
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -102,13 +102,13 @@ const Landing = () => {
     {
       name: "Sarah Johnson",
       role: "CEO, TechFlow Inc.",
-      content: "Mapvon reduced our billing time by 70%. The automation features are incredible!",
+      content: "Makvid reduced our billing time by 70%. The automation features are incredible!",
       company: "Building"
     },
     {
       name: "Michael Chen",
       role: "CFO, RetailPlus",
-      content: "Switching to Mapvon saved us over $15,000 annually in administrative costs.",
+      content: "Switching to Makvid saved us over $15,000 annually in administrative costs.",
       company: "CreditCard"
     },
     {
@@ -120,9 +120,8 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Global User Navbar */}
-      <UserNavbar />
+    <MainLayout>
+      <div className="bg-gradient-to-b from-gray-50 to-white">
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20">
@@ -141,7 +140,7 @@ const Landing = () => {
           </h1>
           
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Mapvon automates your invoicing, expense tracking, and financial reporting. 
+            Makvid automates your invoicing, expense tracking, and financial reporting. 
             Join 10,000+ businesses that trust us with their billing.
           </p>
           
@@ -185,7 +184,7 @@ const Landing = () => {
               <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Perfect Billing</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From automated invoices to detailed financial reports, Mapvon has all your billing needs covered.
+              From automated invoices to detailed financial reports, Makvid has all your billing needs covered.
             </p>
           </div>
           
@@ -265,7 +264,7 @@ const Landing = () => {
               <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Worldwide</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See what our customers have to say about their experience with Mapvon.
+              See what our customers have to say about their experience with Makvid.
             </p>
           </div>
           
@@ -298,7 +297,7 @@ const Landing = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 About
-                <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Mapvon</span>
+                <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Makvid</span>
               </h2>
               <p className="text-xl text-gray-600">
                 We're on a mission to simplify business billing for everyone.
@@ -312,7 +311,7 @@ const Landing = () => {
                     Our Story
                   </h3>
                   <p className="text-gray-700 mb-4">
-                    Founded in 2018, Mapvon started with a simple goal: to make business billing effortless. 
+                    Founded in 2018, Makvid started with a simple goal: to make business billing effortless. 
                     We saw businesses struggling with complex, outdated billing systems and knew there had to be a better way.
                   </p>
                   <p className="text-gray-700 mb-6">
@@ -354,7 +353,7 @@ const Landing = () => {
               Ready to Transform Your Billing?
             </h2>
             <p className="text-xl text-red-100 mb-10 max-w-2xl mx-auto">
-              Join thousands of businesses that have streamlined their billing with Mapvon.
+              Join thousands of businesses that have streamlined their billing with Makvid.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button onClick={() => navigate('/register')} className="px-8 py-4 bg-white text-red-700 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 shadow-2xl">
@@ -371,59 +370,8 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">Mapvon</span>
-              </div>
-              <p className="text-gray-400">
-                Modern billing software for modern businesses.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Product</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="/terms" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Compliance</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Mapvon. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </MainLayout>
   );
 };
 

@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import './User/styles/global.css'
 import App from './App.jsx'
 
 // 🛠️ SELF-HEALING: Clear stale/invalid tokens from other apps

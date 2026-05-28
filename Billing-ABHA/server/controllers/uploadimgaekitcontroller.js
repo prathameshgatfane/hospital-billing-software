@@ -14,7 +14,7 @@ export const uploadImage = async (req, res) => {
     const uploadResponse = await imagekit.upload({
       file: req.file.buffer, // binary
       fileName: `${Date.now()}-${req.file.originalname}`,
-      folder: `/mapvon/${tenantId}/hospital`,
+      folder: `/makvid/${tenantId}/hospital`,
     });
 
     return res.status(201).json({

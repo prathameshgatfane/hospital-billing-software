@@ -1,7 +1,19 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AuthProvider } from "./Common/context/AuthContext";
+import { ThemeProvider } from "./Common/context/ThemeContext";
 import ProtectedRoute from "./Common/Auth/ProtectedRoute";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 
 /* Public Pages */
 import Home from "./User/pages/Home";
@@ -77,9 +89,10 @@ const App = () => {
 
   return (
     <AuthProvider>
-      
-      <Router>
-        <Routes>
+      <ThemeProvider>
+        <Router>
+          <ScrollToTop />
+          <Routes>
 
           {/* ================= PUBLIC ROUTES ================= */}
           <Route path="/" element={<Home />} />
@@ -223,7 +236,8 @@ const App = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
 
         </Routes>
-      </Router>
+        </Router>
+      </ThemeProvider>
     </AuthProvider>
   );
 };

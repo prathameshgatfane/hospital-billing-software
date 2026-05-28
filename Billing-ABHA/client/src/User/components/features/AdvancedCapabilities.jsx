@@ -70,7 +70,7 @@ const AdvancedCapabilities = () => {
             Advanced <span className="text-red-700">Capabilities</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-xl max-w-2xl font-medium mx-auto">
-            Additional features that make Mapvon the complete solution for healthcare institutions.
+            Additional features that make Makvid the complete solution for healthcare institutions.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ const FeaturedTestimonial = () => {
       role: "Chief Administrator",
       hospital: "City Hospital, Amravati",
       initials: "RK",
-      quote: "Mapvon reduced our billing processing time by 70% and improved accuracy by 95%. The implementation was seamless, and their support team is exceptional."
+      quote: "Makvid reduced our billing processing time by 70% and improved accuracy by 95%. The implementation was seamless, and their support team is exceptional."
     },
     {
       name: "Priya Sharma",
@@ -33,7 +33,7 @@ const FeaturedTestimonial = () => {
       role: "IT Director",
       hospital: "Lifeline Hospital",
       initials: "AP",
-      quote: "Our revenue increased by 25% in the first quarter after implementing Mapvon. The analytics dashboard provides valuable insights."
+      quote: "Our revenue increased by 25% in the first quarter after implementing Makvid. The analytics dashboard provides valuable insights."
     }
   ];
 

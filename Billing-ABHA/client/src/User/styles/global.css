@@ -1,0 +1,334 @@
+/* ══════════════════════════════════════════════════════
+   USER PUBLIC SITE — LIGHT MODE OVERRIDES
+   Scoped to [data-user-site] wrapper in MainLayout.jsx
+   Only applies when html does NOT have the .dark class
+   ══════════════════════════════════════════════════════ */
+
+/* ── Base: wrapper background & text ── */
+html:not(.dark) [data-user-site] {
+    background-color: #FFFFFF;
+    color: #111827;
+}
+
+/* ── Section & Footer base ── */
+html:not(.dark) [data-user-site] section {
+    background-color: #F8F9FA;
+    color: #111827;
+}
+
+/* ── Specific background class overrides ── */
+html:not(.dark) [data-user-site] .bg-charcoal {
+    background-color: #FFFFFF !important;
+}
+
+html:not(.dark) [data-user-site] .bg-\[\#212121\] {
+    background-color: #F3F4F6 !important;
+}
+
+html:not(.dark) [data-user-site] .bg-\[\#1a1a1a\] {
+    background-color: #FFFFFF !important;
+}
+
+html:not(.dark) [data-user-site] .bg-\[\#161616\] {
+    background-color: #F9FAFB !important;
+}
+
+html:not(.dark) [data-user-site] .bg-\[\#0F0F0F\] {
+    background-color: #EAECF0 !important;
+}
+
+/* Keep video-based Hero section dark regardless of theme */
+html:not(.dark) [data-user-site] .bg-black {
+    background-color: #000000 !important;
+}
+
+/* ── White opacity backgrounds → light equivalents ── */
+html:not(.dark) [data-user-site] .bg-white\/5 {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) [data-user-site] .bg-white\/10 {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) [data-user-site] .bg-white\/20 {
+    background-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+/* Backdrop blurs (tag pills, search bar, etc.) */
+html:not(.dark) [data-user-site] .backdrop-blur-md,
+html:not(.dark) [data-user-site] .backdrop-blur-xl {
+    background-color: rgba(255, 255, 255, 0.80) !important;
+}
+
+/* ── Text color overrides ── */
+html:not(.dark) [data-user-site] .text-white {
+    color: #111827 !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/20 {
+    color: rgba(0, 0, 0, 0.18) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/30 {
+    color: rgba(0, 0, 0, 0.28) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/40 {
+    color: rgba(0, 0, 0, 0.36) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/50 {
+    color: rgba(0, 0, 0, 0.44) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/60 {
+    color: rgba(0, 0, 0, 0.52) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/70 {
+    color: rgba(0, 0, 0, 0.62) !important;
+}
+
+html:not(.dark) [data-user-site] .text-white\/80 {
+    color: rgba(0, 0, 0, 0.72) !important;
+}
+
+html:not(.dark) [data-user-site] .text-gray-400 {
+    color: #6B7280 !important;
+}
+
+html:not(.dark) [data-user-site] .text-gray-300 {
+    color: #4B5563 !important;
+}
+
+/* ── Border overrides ── */
+html:not(.dark) [data-user-site] .border-white\/5 {
+    border-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+html:not(.dark) [data-user-site] .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+html:not(.dark) [data-user-site] .border-white\/20 {
+    border-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+html:not(.dark) [data-user-site] .border-transparent {
+    border-color: transparent !important;
+}
+
+/* ── Navbar: force light background when scrolled ── */
+html:not(.dark) [data-user-site] nav {
+    color: #111827 !important;
+}
+
+html:not(.dark) [data-user-site] nav a,
+html:not(.dark) [data-user-site] nav span,
+html:not(.dark) [data-user-site] nav button {
+    color: #111827 !important;
+}
+
+/* Navbar scrolled/open state */
+html:not(.dark) [data-user-site] .bg-\[\#212121\]\/95 {
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* Navbar transparent state */
+html:not(.dark) [data-user-site] nav.bg-transparent {
+    background-color: rgba(255,255,255,0.50) !important;
+}
+
+/* ── Search input inside Navbar ── */
+html:not(.dark) [data-user-site] nav input {
+    color: #111827 !important;
+}
+
+html:not(.dark) [data-user-site] nav input::placeholder {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+/* ── Mobile menu drawer ── */
+html:not(.dark) [data-user-site] .bg-\[\#1a1a1a\] {
+    background-color: #FFFFFF !important;
+}
+
+/* ── Shadows: lighten for light mode ── */
+html:not(.dark) [data-user-site] .shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark) [data-user-site] .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* ── Hover states ── */
+html:not(.dark) [data-user-site] .hover\:bg-white\/10:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) [data-user-site] .hover\:bg-gray-50:hover {
+    background-color: #F9FAFB !important;
+}
+
+/* ── Footer specific ── */
+html:not(.dark) [data-user-site] footer {
+    background-color: #F3F4F6 !important;
+    color: #374151 !important;
+    border-top: 1px solid #E5E7EB;
+}
+
+/* ── Exclude Dark Containers (like Hero, StatsMarquee, CallToAction, etc.) from Light Mode overrides ── */
+html:not(.dark) [data-user-site] .bg-black .text-white,
+html:not(.dark) [data-user-site] .bg-black .text-white\/70,
+html:not(.dark) [data-user-site] .bg-black .text-white\/80,
+html:not(.dark) [data-user-site] .bg-black .text-white\/40,
+html:not(.dark) [data-user-site] .bg-black .border-white,
+html:not(.dark) [data-user-site] .bg-black .border-white\/10,
+html:not(.dark) [data-user-site] .bg-black .border-white\/20,
+html:not(.dark) [data-user-site] .bg-black .bg-transparent,
+html:not(.dark) [data-user-site] .bg-red-700 .text-white,
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/60,
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/80,
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/40,
+html:not(.dark) [data-user-site] .bg-red-700 .border-white\/10,
+html:not(.dark) [data-user-site] .bg-red-700 .border-white\/20,
+html:not(.dark) [data-user-site] .bg-red-700 .bg-white\/5,
+html:not(.dark) [data-user-site] .bg-red-700 .bg-white\/10,
+html:not(.dark) [data-user-site] .bg-red-700 .bg-white\/20,
+html:not(.dark) [data-user-site] .bg-primary .text-white,
+html:not(.dark) [data-user-site] .dark-force .text-white,
+html:not(.dark) [data-user-site] .dark-force .text-white\/80,
+html:not(.dark) [data-user-site] .dark-force .text-white\/70,
+html:not(.dark) [data-user-site] .dark-force .text-white\/60,
+html:not(.dark) [data-user-site] .text-white-force,
+html:not(.dark) [data-user-site] .text-white-force * {
+    color: #FFFFFF !important;
+}
+
+html:not(.dark) [data-user-site] .bg-black .text-white\/70 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+html:not(.dark) [data-user-site] .bg-black .text-white\/80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+html:not(.dark) [data-user-site] .bg-black .text-white\/40 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/60 {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+html:not(.dark) [data-user-site] .bg-red-700 .text-white\/40 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Restore borders in always-dark components */
+html:not(.dark) [data-user-site] .bg-black .border-white\/10,
+html:not(.dark) [data-user-site] .bg-red-700 .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+html:not(.dark) [data-user-site] .bg-black .border-white\/20,
+html:not(.dark) [data-user-site] .bg-red-700 .border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+html:not(.dark) [data-user-site] .bg-black .border-white,
+html:not(.dark) [data-user-site] .bg-red-700 .border-white {
+    border-color: #FFFFFF !important;
+}
+
+/* ── Navbar forced dark mode (homepage & landing un-scrolled transparent states) ── */
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme,
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme a,
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme span,
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme button,
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme input {
+    color: #FFFFFF !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/40 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/30 {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/20 {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .bg-white\/5 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme.bg-transparent {
+    background-color: transparent !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme button.bg-white {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+html:not(.dark) [data-user-site] nav.nav-force-dark-theme button.bg-white span {
+    color: #000000 !important;
+}
+
+/* ── Dark Mode Helper Classes for Public/Landing Pages ── */
+.dark [data-user-site] .text-gray-900 {
+    color: #FFFFFF !important;
+}
+.dark [data-user-site] .text-gray-800 {
+    color: #F3F4F6 !important;
+}
+.dark [data-user-site] .text-gray-700 {
+    color: #E5E7EB !important;
+}
+.dark [data-user-site] .text-gray-600 {
+    color: #9CA3AF !important;
+}
+.dark [data-user-site] .text-gray-500 {
+    color: #6B7280 !important;
+}
+.dark [data-user-site] .bg-white {
+    background-color: #1a1a1a !important;
+}
+.dark [data-user-site] .bg-gray-50 {
+    background-color: #212121 !important;
+}
+.dark [data-user-site] .bg-red-50 {
+    background-color: rgba(220, 38, 38, 0.15) !important;
+}
+.dark [data-user-site] .text-red-600 {
+    color: #EF4444 !important;
+}
+.dark [data-user-site] .border-gray-200 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.dark [data-user-site] .border-gray-300 {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.dark [data-user-site] .bg-gradient-to-b.from-gray-50.to-white {
+    background-image: linear-gradient(to bottom, #212121, #1a1a1a) !important;
+}
+.dark [data-user-site] .bg-gradient-to-b.from-white.to-gray-50 {
+    background-image: linear-gradient(to bottom, #1a1a1a, #212121) !important;
+}
+.dark [data-user-site] .hover\:bg-red-50:hover {
+    background-color: rgba(220, 38, 38, 0.1) !important;
+}
+.dark [data-user-site] .hover\:border-red-300:hover {
+    border-color: #EF4444 !important;
+}
+
+

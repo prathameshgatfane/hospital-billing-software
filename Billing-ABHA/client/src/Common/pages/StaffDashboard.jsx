@@ -57,7 +57,7 @@ const StaffDashboard = () => {
             <Stethoscope className="w-5 h-5 text-red-600" />
           </div>
           <div>
-            <h1 className="font-bold text-gray-900 text-lg">MAPVON Staff Portal</h1>
+            <h1 className="font-bold text-gray-900 text-lg">MAKVID Staff Portal</h1>
             <p className="text-xs text-gray-500">Welcome, {staffUser.name}</p>
           </div>
         </div>
