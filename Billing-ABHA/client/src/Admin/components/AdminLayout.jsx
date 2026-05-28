@@ -6,6 +6,25 @@ import { LogOut, User, Bell, Search } from "lucide-react";
 const AdminLayout = () => {
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    // Force light mode on document root while Admin panel is mounted
+    const root = document.documentElement;
+    const isDark = root.classList.contains("dark");
+    if (isDark) {
+      root.classList.remove("dark");
+      root.style.colorScheme = "light";
+    }
+
+    return () => {
+      // Restore user's preferred theme when leaving admin pages
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        root.classList.add("dark");
+        root.style.colorScheme = "dark";
+      }
+    };
+  }, []);
+
   const handleLogout = () => {
     // Clear admin authentication
     localStorage.removeItem("adminToken");

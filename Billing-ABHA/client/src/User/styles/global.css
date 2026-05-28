@@ -133,12 +133,12 @@ html:not(.dark) [data-user-site] nav button {
 /* Navbar scrolled/open state */
 html:not(.dark) [data-user-site] .bg-\[\#212121\]\/95 {
     background-color: rgba(255, 255, 255, 0.96) !important;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.08) !important;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Navbar transparent state */
 html:not(.dark) [data-user-site] nav.bg-transparent {
-    background-color: rgba(255,255,255,0.50) !important;
+    background-color: rgba(255, 255, 255, 0.50) !important;
 }
 
 /* ── Search input inside Navbar ── */
@@ -147,7 +147,7 @@ html:not(.dark) [data-user-site] nav input {
 }
 
 html:not(.dark) [data-user-site] nav input::placeholder {
-    color: rgba(0,0,0,0.35) !important;
+    color: rgba(0, 0, 0, 0.35) !important;
 }
 
 /* ── Mobile menu drawer ── */
@@ -211,18 +211,23 @@ html:not(.dark) [data-user-site] .text-white-force * {
 html:not(.dark) [data-user-site] .bg-black .text-white\/70 {
     color: rgba(255, 255, 255, 0.7) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-black .text-white\/80 {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-black .text-white\/40 {
     color: rgba(255, 255, 255, 0.4) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-red-700 .text-white\/80 {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-red-700 .text-white\/60 {
     color: rgba(255, 255, 255, 0.6) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-red-700 .text-white\/40 {
     color: rgba(255, 255, 255, 0.4) !important;
 }
@@ -232,10 +237,12 @@ html:not(.dark) [data-user-site] .bg-black .border-white\/10,
 html:not(.dark) [data-user-site] .bg-red-700 .border-white\/10 {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-black .border-white\/20,
 html:not(.dark) [data-user-site] .bg-red-700 .border-white\/20 {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
+
 html:not(.dark) [data-user-site] .bg-black .border-white,
 html:not(.dark) [data-user-site] .bg-red-700 .border-white {
     border-color: #FFFFFF !important;
@@ -249,37 +256,48 @@ html:not(.dark) [data-user-site] nav.nav-force-dark-theme button,
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme input {
     color: #FFFFFF !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/80 {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/40 {
     color: rgba(255, 255, 255, 0.4) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/30 {
     color: rgba(255, 255, 255, 0.3) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .text-white\/20 {
     color: rgba(255, 255, 255, 0.2) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .border-white\/10 {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .border-white\/20 {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .bg-white\/5 {
     background-color: rgba(255, 255, 255, 0.05) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme .bg-white\/10 {
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme.bg-transparent {
     background-color: transparent !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme button.bg-white {
     background-color: #FFFFFF !important;
     color: #000000 !important;
 }
+
 html:not(.dark) [data-user-site] nav.nav-force-dark-theme button.bg-white span {
     color: #000000 !important;
 }
@@ -288,47 +306,59 @@ html:not(.dark) [data-user-site] nav.nav-force-dark-theme button.bg-white span {
 .dark [data-user-site] .text-gray-900 {
     color: #FFFFFF !important;
 }
+
 .dark [data-user-site] .text-gray-800 {
     color: #F3F4F6 !important;
 }
+
 .dark [data-user-site] .text-gray-700 {
     color: #E5E7EB !important;
 }
+
 .dark [data-user-site] .text-gray-600 {
     color: #9CA3AF !important;
 }
+
 .dark [data-user-site] .text-gray-500 {
     color: #6B7280 !important;
 }
+
 .dark [data-user-site] .bg-white {
     background-color: #1a1a1a !important;
 }
+
 .dark [data-user-site] .bg-gray-50 {
     background-color: #212121 !important;
 }
+
 .dark [data-user-site] .bg-red-50 {
     background-color: rgba(220, 38, 38, 0.15) !important;
 }
+
 .dark [data-user-site] .text-red-600 {
     color: #EF4444 !important;
 }
+
 .dark [data-user-site] .border-gray-200 {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
+
 .dark [data-user-site] .border-gray-300 {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
+
 .dark [data-user-site] .bg-gradient-to-b.from-gray-50.to-white {
     background-image: linear-gradient(to bottom, #212121, #1a1a1a) !important;
 }
+
 .dark [data-user-site] .bg-gradient-to-b.from-white.to-gray-50 {
     background-image: linear-gradient(to bottom, #1a1a1a, #212121) !important;
 }
+
 .dark [data-user-site] .hover\:bg-red-50:hover {
     background-color: rgba(220, 38, 38, 0.1) !important;
 }
+
 .dark [data-user-site] .hover\:border-red-300:hover {
     border-color: #EF4444 !important;
 }
-
-

@@ -43,7 +43,9 @@ const Footer = () => {
         { name: "Documentation", path: "#" },
         { name: "Contact Us", path: "#" },
         { name: "FAQs", path: "#" },
-        { name: "System Status", path: "#" }
+        { name: "System Status", path: "#" },
+        { name: "Terms of Service", path: "/terms" },
+        { name: "Privacy Policy", path: "/privacy" }
       ]
     }
   ];
@@ -57,7 +59,7 @@ const Footer = () => {
 
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Link to="/">
-              <img src={logo} alt="Macvid" className="h-14 md:h-20 mb-6" />
+              <img src={logo} alt="Mapvon" className="h-14 md:h-20 mb-6" />
             </Link>
             <p className="text-white/70 text-sm md:text-base max-w-xs leading-relaxed mb-8 font-medium">
               Simplifying hospital billing & clinic management across India with state-of-the-art technology.
@@ -102,7 +104,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
           <p className="text-white/40 text-[10px] sm:text-xs font-medium tracking-wide">
-            © 2025 MAKWID SOFTWARE. ALL RIGHTS RESERVED.
+            © 2026 MAPVON TECHNOLOGIES PVT LTD. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center justify-center lg:justify-end gap-2 text-white/40 text-[10px] sm:text-xs font-medium">
             <span>MADE WITH</span>

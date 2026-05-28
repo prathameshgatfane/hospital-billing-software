@@ -179,6 +179,27 @@ const patientSchema = new mongoose.Schema(
       insuranceCard: String,
     },
 
+    // 🪪 ABHA Details
+    abhaNumber: {
+      type: String,
+      index: { unique: true, sparse: true },
+    },
+    abhaAddress: {
+      type: String,
+      index: { unique: true, sparse: true },
+    },
+    abhaProfile: {
+      photo: String,
+      kycVerified: {
+        type: Boolean,
+        default: false,
+      },
+      mobileLinked: {
+        type: Boolean,
+        default: false,
+      },
+    },
+
     // 📊 Status
     status: {
       type: String,

@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
                 Mapvon Technologies Pvt Ltd ("Mapvon", "we", "us", or "our") operates the Mapvon Hospital Billing Software. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our software.
               </p>
               <p className="text-gray-700">
-                We are committed to protecting the privacy and confidentiality of all patient data and hospital information in compliance with applicable laws and regulations, including the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023.
+                We are committed to protecting the privacy and confidentiality of all patient data and hospital information in compliance with applicable laws and regulations, including the Information Technology Act, 2000, the Digital Personal Data Protection Act, 2023, and the National Health Authority (NHA) ABDM guidelines.
               </p>
             </section>
 
@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="bg-gray-50 p-6 rounded-lg mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3 Technical Information</h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>IP addresses and device information</li>
@@ -68,6 +68,16 @@ const PrivacyPolicy = () => {
                   <li>Operating system details</li>
                   <li>Usage patterns and system logs</li>
                   <li>Cookies and similar technologies</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.4 ABDM Ecosystem Integration Data</h3>
+                <p className="text-gray-700 mb-3 font-medium">When utilizing our Ayushman Bharat Digital Mission (ABDM) integration features, we process:</p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                  <li><strong>ABHA Details:</strong> Demographic data (Aadhaar or Mobile) for generating or linking your ABHA ID (processed via NHA secured APIs with explicit patient OTP verification).</li>
+                  <li><strong>Health Records (HIP):</strong> Diagnostic reports, prescriptions, discharge summaries, and OPD slips digitized and formatted into ABDM-compliant FHIR standards.</li>
+                  <li><strong>Consent Logs:</strong> Metadata of requests, approvals, and revocations generated through patient consent managers (PHR Apps) to maintain a complete compliance audit trail.</li>
                 </ul>
               </div>
             </section>
@@ -82,12 +92,12 @@ const PrivacyPolicy = () => {
                   <p className="text-gray-700 text-sm">Generate accurate bills, process insurance claims, and manage payments</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Patient Care</h4>
-                  <p className="text-gray-700 text-sm">Maintain medical records and facilitate treatment continuity</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Patient Care & ABDM Share</h4>
+                  <p className="text-gray-700 text-sm">Maintain medical records and facilitate treatment continuity and digital health sharing via ABDM</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">Compliance</h4>
-                  <p className="text-gray-700 text-sm">Meet regulatory requirements and audit obligations</p>
+                  <p className="text-gray-700 text-sm">Meet NHA, local regulatory, and financial audit obligations</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">System Improvement</h4>
@@ -105,7 +115,7 @@ const PrivacyPolicy = () => {
                   <div className="text-center">
                     <div className="text-3xl mb-2">🔒</div>
                     <h4 className="font-semibold">End-to-End Encryption</h4>
-                    <p className="text-gray-300 text-sm">AES-256 encryption for all data at rest and in transit</p>
+                    <p className="text-gray-300 text-sm">AES-256 encryption for all data at rest and in transit (via HTTPS and secure gateway)</p>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl mb-2">🛡️</div>
@@ -115,7 +125,7 @@ const PrivacyPolicy = () => {
                   <div className="text-center">
                     <div className="text-3xl mb-2">📊</div>
                     <h4 className="font-semibold">Audit Logs</h4>
-                    <p className="text-gray-300 text-sm">Comprehensive audit trails for all data access and modifications</p>
+                    <p className="text-gray-300 text-sm">Comprehensive audit trails for all data access, modifications, and ABDM transactions</p>
                   </div>
                 </div>
               </div>
@@ -137,7 +147,7 @@ const PrivacyPolicy = () => {
                     <tr className="hover:bg-gray-50">
                       <td className="py-3 px-4 border-b">Patient Medical Records</td>
                       <td className="py-3 px-4 border-b">10 years after last visit</td>
-                      <td className="py-3 px-4 border-b">Medical and legal requirements</td>
+                      <td className="py-3 px-4 border-b">Medical Council and legal requirements</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="py-3 px-4 border-b">Billing Transactions</td>
@@ -145,9 +155,9 @@ const PrivacyPolicy = () => {
                       <td className="py-3 px-4 border-b">Financial audit requirements</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="py-3 px-4 border-b">System Logs</td>
-                      <td className="py-3 px-4 border-b">2 years</td>
-                      <td className="py-3 px-4 border-b">Security monitoring</td>
+                      <td className="py-3 px-4 border-b">System & Consent Logs</td>
+                      <td className="py-3 px-4 border-b">3 years</td>
+                      <td className="py-3 px-4 border-b">Security monitoring and ABDM audit compliance</td>
                     </tr>
                   </tbody>
                 </table>
@@ -167,7 +177,7 @@ const PrivacyPolicy = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Right to Access</h4>
-                    <p className="text-gray-700">Request access to your personal information stored in our system.</p>
+                    <p className="text-gray-700">Request access to your personal information and health records stored in our system.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -184,8 +194,8 @@ const PrivacyPolicy = () => {
                     <span className="text-red-600 font-bold">🗑️</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Right to Deletion</h4>
-                    <p className="text-gray-700">Request deletion of personal data, subject to legal requirements.</p>
+                    <h4 className="font-semibold text-gray-900">Right to Deletion / Revocation</h4>
+                    <p className="text-gray-700">Request deletion of personal data or revoke your consent for health record sharing via ABDM at any time.</p>
                   </div>
                 </div>
               </div>

@@ -61,7 +61,7 @@ const Login = () => {
       if (result.success) {
         // Redirect based on registration stage
         if (result.registrationStage === 'BASIC') {
-          navigate('/subadmin/profile'); // Redirect to profile completion
+          navigate('/subadmin/profile-completion'); // Redirect to profile completion
         } else {
           navigate('/subadmin'); // Redirect to dashboard
         }

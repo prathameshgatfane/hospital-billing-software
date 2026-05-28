@@ -18,7 +18,7 @@ const Login = () => {
 
     const result = await login(email, password);
     if (result.success) {
-      if (result.registrationStage === "COMPLETE") {
+      if (result.registrationStage === "COMPLETED") {
         navigate("/subadmin");
       } else {
         navigate("/subadmin/profile-completion");

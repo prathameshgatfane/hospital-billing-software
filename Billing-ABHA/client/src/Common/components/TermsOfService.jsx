@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FileText, Scale, Shield, AlertCircle, CheckCircle, BookOpen, UserCheck, Clock, Mail, ExternalLink } from "lucide-react";
+import { FileText, Scale, Shield, AlertCircle, CheckCircle, BookOpen, UserCheck, Clock, Mail } from "lucide-react";
 
 const TermsOfService = () => {
-  const effectiveDate = "January 15, 2024";
+  const effectiveDate = "May 21, 2026";
   
   const importantPoints = [
-    "By using Makvid, you agree to these Terms of Service",
-    "You retain ownership of your hospital data",
-    "We process data in compliance with healthcare regulations",
-    "Account security is your responsibility"
+    "By using Mapvon, you agree to these Terms of Service",
+    "You retain ownership of your hospital and patient data",
+    "We process data in compliance with ABDM, DPDP, and healthcare regulations",
+    "Account security and patient consent management is your responsibility"
   ];
 
   return (
@@ -31,7 +31,7 @@ const TermsOfService = () => {
             <span className="text-sm font-medium">Effective: {effectiveDate}</span>
           </div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            These Terms of Service govern your use of Makvid's hospital management platform. Please read them carefully.
+            These Terms of Service govern your use of Mapvon's hospital management platform. Please read them carefully.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ const TermsOfService = () => {
             <div className="flex flex-wrap gap-2">
               {[
                 "Acceptance", "Services", "Account", "Data", "Prohibited", 
-                "Termination", "Liability", "Changes", "Contact"
+                "Termination", "Liability", "ABDM Compliance", "Contact"
               ].map((item, index) => (
                 <a
                   key={index}
@@ -93,7 +93,7 @@ const TermsOfService = () => {
               </div>
               <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  By accessing or using <span className="font-semibold text-blue-700">Makvid's</span> hospital billing and financial management platform ("Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                  By accessing or using <span className="font-semibold text-blue-700">Mapvon's</span> hospital billing and financial management platform ("Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
                 </p>
                 <div className="bg-white p-4 rounded-lg border border-blue-100">
                   <p className="text-gray-700 text-sm">
@@ -127,10 +127,10 @@ const TermsOfService = () => {
                         <p className="text-gray-700 text-sm">Financial reporting and analytics</p>
                       </div>
                       <div className="bg-white p-3 rounded-lg border border-purple-100">
-                        <p className="text-gray-700 text-sm">Patient data management</p>
+                        <p className="text-gray-700 text-sm">Patient data management & ABHA Integration</p>
                       </div>
                       <div className="bg-white p-3 rounded-lg border border-purple-100">
-                        <p className="text-gray-700 text-sm">Compliance tracking</p>
+                        <p className="text-gray-700 text-sm">ABDM Compliance tracking</p>
                       </div>
                     </div>
                   </div>
@@ -169,7 +169,7 @@ const TermsOfService = () => {
                     },
                     {
                       title: "Unauthorized Access",
-                      content: "You must immediately notify Makvid of any unauthorized use of your account or any other security breach."
+                      content: "You must immediately notify Mapvon of any unauthorized use of your account or any other security breach."
                     },
                     {
                       title: "Single Organization",
@@ -203,7 +203,7 @@ const TermsOfService = () => {
                     <h3 className="font-semibold text-gray-900 mb-3">Data Ownership</h3>
                     <div className="bg-white p-4 rounded-lg border border-red-100">
                       <p className="text-gray-700">
-                        You retain all ownership rights to your hospital data, including patient information, billing records, and operational data. Makvid acts as a data processor and only processes your data to provide the Services in accordance with these Terms and our Privacy Policy.
+                        You retain all ownership rights to your hospital data, including patient information, billing records, and operational data. Mapvon acts as a data processor and only processes your data to provide the Services in accordance with these Terms and our Privacy Policy.
                       </p>
                     </div>
                   </div>
@@ -212,15 +212,15 @@ const TermsOfService = () => {
                     <h3 className="font-semibold text-gray-900 mb-3">Healthcare Compliance</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="bg-white p-4 rounded-lg border border-red-100">
-                        <h4 className="font-medium text-gray-900 mb-2">HIPAA Compliance</h4>
+                        <h4 className="font-medium text-gray-900 mb-2">ABDM & DPDP Compliance</h4>
                         <p className="text-gray-700 text-sm">
-                          We implement administrative, physical, and technical safeguards to maintain HIPAA compliance for covered entities.
+                          We implement administrative, physical, and technical safeguards to maintain ABDM and Digital Personal Data Protection (DPDP) Act, 2023 compliance for healthcare entities.
                         </p>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-red-100">
                         <h4 className="font-medium text-gray-900 mb-2">Data Security</h4>
                         <p className="text-gray-700 text-sm">
-                          Industry-standard encryption, access controls, and regular security audits protect your sensitive healthcare data.
+                          Industry-standard encryption (AES-256), access controls, and regular security audits protect your sensitive healthcare data.
                         </p>
                       </div>
                     </div>
@@ -276,7 +276,7 @@ const TermsOfService = () => {
               <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg border border-gray-100">
-                    <h3 className="font-semibold text-gray-900 mb-2">By Makvid</h3>
+                    <h3 className="font-semibold text-gray-900 mb-2">By Mapvon</h3>
                     <p className="text-gray-700 text-sm">
                       We may suspend or terminate your access to the Services immediately, without prior notice, if we believe you have violated these Terms, pose a security risk, or if required by law. In most cases, we will provide you with notice and an opportunity to remedy the violation.
                     </p>
@@ -306,12 +306,59 @@ const TermsOfService = () => {
               <div className="bg-indigo-50 p-5 rounded-lg border border-indigo-200">
                 <div className="bg-white p-5 rounded-lg border border-indigo-100">
                   <p className="text-gray-700 mb-4">
-                    To the maximum extent permitted by law, Makvid shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising from your use of the Services.
+                    To the maximum extent permitted by law, Mapvon shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising from your use of the Services.
                   </p>
                   <div className="text-sm text-gray-600 bg-indigo-50 p-3 rounded border border-indigo-100">
                     <p className="font-medium mb-1">Important Note:</p>
                     <p>
-                      This limitation applies even if Makvid has been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion or limitation of certain damages, so this limitation may not apply to you.
+                      This limitation applies even if Mapvon has been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion or limitation of certain damages, so this limitation may not apply to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* ABDM Integration Compliance */}
+            <section id="section-8" className="scroll-mt-20">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-emerald-600" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">8. ABDM Ecosystem Integration & Patient Consent</h2>
+                  <p className="text-sm text-gray-500 mt-1">NHA & ABDM guidelines for healthcare entities</p>
+                </div>
+              </div>
+
+              <div className="bg-emerald-50 p-5 rounded-lg border border-emerald-200">
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg border border-emerald-100">
+                    <h3 className="font-semibold text-gray-900 mb-2">8.1 HIP & HIU Compliance</h3>
+                    <p className="text-gray-700 text-sm">
+                      Mapvon is integrated with the Ayushman Bharat Digital Mission (ABDM) as a Health Information Provider (HIP) and Health Information User (HIU). The hospital/clinic agrees to abide by all National Health Authority (NHA) policies and standards when interacting with the National Digital Health Ecosystem (NDHE).
+                    </p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-emerald-100">
+                    <h3 className="font-semibold text-gray-900 mb-2">8.2 Informed Patient Consent</h3>
+                    <p className="text-gray-700 text-sm">
+                      Hospitals/clinics using Mapvon are solely responsible for obtaining explicit, informed, and documented consent from patients before:
+                    </p>
+                    <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700 text-sm">
+                      <li>Generating or linking an Ayushman Bharat Health Account (ABHA) ID.</li>
+                      <li>Uploading or digitizing patient diagnostic records, lab reports, or discharge summaries to the ABDM gateway.</li>
+                      <li>Accessing or pulling patient health records from other healthcare facilities through the ABDM gateway.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-emerald-100">
+                    <h3 className="font-semibold text-gray-900 mb-2">8.3 Consent Records and Audits</h3>
+                    <p className="text-gray-700 text-sm">
+                      The hospital/clinic must maintain audit logs of all patient consents. Mapvon reserves the right to review consent artifacts and system logs to verify compliance with National NHA guidelines and Indian laws, including the Digital Personal Data Protection Act, 2023.
+                    </p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-emerald-100">
+                    <h3 className="font-semibold text-gray-900 mb-2">8.4 Consent Revocation</h3>
+                    <p className="text-gray-700 text-sm">
+                      Patients have the right to revoke consent for data sharing at any time. Upon revocation, the hospital must immediately stop sharing patient health data via the ABDM network, although local physical and electronic records may be retained as required by clinical establishment laws.
                     </p>
                   </div>
                 </div>
@@ -341,16 +388,16 @@ const TermsOfService = () => {
                   </div>
                   <div className="space-y-3">
                     <a 
-                      href="mailto:legal@makvid.com" 
+                      href="mailto:legal@mapvon.com" 
                       className="block text-lg font-medium text-cyan-700 hover:text-cyan-800"
                     >
-                      legal@makvid.com
+                      legal@mapvon.com
                     </a>
                     <a 
-                      href="mailto:support@makvid.com" 
+                      href="mailto:support@mapvon.com" 
                       className="block text-lg font-medium text-cyan-700 hover:text-cyan-800"
                     >
-                      support@makvid.com
+                      support@mapvon.com
                     </a>
                     <p className="text-gray-600 text-sm">
                       We typically respond to legal inquiries within 3-5 business days.
@@ -370,7 +417,7 @@ const TermsOfService = () => {
                   These Terms of Service are effective as of {effectiveDate}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
-                  By using Makvid, you acknowledge that you have read and agree to these Terms.
+                  By using Mapvon, you acknowledge that you have read and agree to these Terms.
                 </p>
               </div>
               <div className="flex items-center gap-4">
@@ -396,10 +443,12 @@ const TermsOfService = () => {
           <div className="inline-flex items-center gap-4 text-gray-500 text-sm">
             <span className="flex items-center gap-1">
               <Shield className="w-4 h-4" />
-              HIPAA Compliant
+              ABDM Certified
             </span>
             <span>•</span>
-            <span>GDPR Ready</span>
+            <span>DPDP Act Compliant</span>
+            <span>•</span>
+            <span>HIPAA Compliant</span>
             <span>•</span>
             <span>ISO 27001 Certified</span>
           </div>

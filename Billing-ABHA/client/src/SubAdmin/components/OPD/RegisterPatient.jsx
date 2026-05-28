@@ -5,9 +5,10 @@ import {
   ArrowLeft, Save, User, Phone, Mail,
   MapPin, Heart, AlertCircle, Weight,
   Ruler, FileText, Shield, Plus, Trash2,
-  CheckCircle2, Receipt
+  CheckCircle2, Receipt, Fingerprint, Check, RefreshCw
 } from 'lucide-react';
 import patientApi from '../../API/patientApi';
+import abdmApi from '../../API/abdmApi';
 import { useAuth } from '../../../Common/context/AuthContext';
 
 /* ─── Smaller Reusable UI Helpers ─── */
@@ -55,8 +56,86 @@ const RegisterPatient = () => {
     emergencyContact: { name: '', relation: '', mobile: '', email: '' },
     chronicConditions: '', knownAllergies: [''],
     billingDetails: { isInsured: false, insuranceProvider: '', policyNumber: '', policyHolder: '', validTill: '' },
-    bloodGroup: '', height: '', weight: '', notes: ''
+    bloodGroup: '', height: '', weight: '', notes: '',
+    abhaNumber: '', abhaAddress: ''
   });
+
+  // ABHA flow state variables
+  const [aadhaarNumber, setAadhaarNumber] = useState('');
+  const [otpValue, setOtpValue] = useState('');
+  const [txnId, setTxnId] = useState('');
+  const [otpSent, setOtpSent] = useState(false);
+  const [verifyingAbha, setVerifyingAbha] = useState(false);
+  const [abhaError, setAbhaError] = useState('');
+  const [abhaSuccess, setAbhaSuccess] = useState('');
+
+  const handleRequestOtp = async () => {
+    setAbhaError('');
+    setAbhaSuccess('');
+    if (aadhaarNumber.length !== 12) {
+      setAbhaError('Aadhaar number must be exactly 12 digits');
+      return;
+    }
+    setVerifyingAbha(true);
+    try {
+      const res = await abdmApi.requestOtp(aadhaarNumber);
+      if (res.success) {
+        setTxnId(res.txnId);
+        setOtpSent(true);
+        setAbhaSuccess(res.isMock ? 'Sandbox Mode: OTP requested! Enter 123456 to verify.' : 'OTP sent successfully to your Aadhaar-linked mobile!');
+      } else {
+        setAbhaError(res.message || 'Failed to request OTP');
+      }
+    } catch (err) {
+      setAbhaError(err.message || 'Error occurred while requesting OTP');
+    } finally {
+      setVerifyingAbha(false);
+    }
+  };
+
+  const handleVerifyOtp = async () => {
+    setAbhaError('');
+    setAbhaSuccess('');
+    if (!otpValue) {
+      setAbhaError('Please enter the OTP received');
+      return;
+    }
+    setVerifyingAbha(true);
+    try {
+      const res = await abdmApi.verifyOtp(txnId, otpValue);
+      if (res.success && res.profile) {
+        const profile = res.profile;
+        setFormData(prev => ({
+          ...prev,
+          firstName: profile.firstName || prev.firstName,
+          lastName: profile.lastName || prev.lastName,
+          gender: profile.gender || prev.gender,
+          dateOfBirth: profile.dateOfBirth || prev.dateOfBirth,
+          mobile: profile.mobile || prev.mobile,
+          abhaNumber: profile.abhaNumber || '',
+          abhaAddress: profile.abhaAddress || '',
+          address: {
+            ...prev.address,
+            addressLine1: profile.address?.addressLine1 || prev.address.addressLine1,
+            city: profile.address?.city || prev.address.city,
+            state: profile.address?.state || prev.address.state,
+            pincode: profile.address?.pincode || prev.address.pincode,
+          }
+        }));
+        setAbhaSuccess(`ABHA verified successfully! Number: ${profile.abhaNumber}`);
+        // Reset Aadhaar form
+        setOtpSent(false);
+        setAadhaarNumber('');
+        setOtpValue('');
+      } else {
+        setAbhaError(res.message || 'OTP verification failed');
+      }
+    } catch (err) {
+      setAbhaError(err.message || 'Error occurred during OTP verification');
+    } finally {
+      setVerifyingAbha(false);
+    }
+  };
 
   useEffect(() => {
     if (isEditMode) fetchPatient();
@@ -101,7 +180,9 @@ const RegisterPatient = () => {
           bloodGroup: p.bloodGroup || '',
           height: p.height || '',
           weight: p.weight || '',
-          notes: p.notes || ''
+          notes: p.notes || '',
+          abhaNumber: p.abhaNumber || '',
+          abhaAddress: p.abhaAddress || ''
         });
       }
     } catch (error) {
@@ -244,6 +325,176 @@ const RegisterPatient = () => {
             </div>
           )}
 
+          {/* 🪪 ABHA (ABDM) Aadhaar Verification Panel */}
+          {!isEditMode && (
+            <div style={{
+              background: 'linear-gradient(135deg, var(--card-bg) 0%, rgba(220, 38, 38, 0.03) 100%)',
+              border: '1px dashed #DC2626',
+              borderRadius: 14,
+              padding: 24,
+              boxShadow: '0 4px 12px rgba(220, 38, 38, 0.05)',
+              fontFamily: "'DM Sans', sans-serif"
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, borderBottom: '1px solid var(--card-border)', paddingBottom: 14, marginBottom: 18 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ background: '#FEF2F2', padding: 8, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Fingerprint size={20} color="#DC2626" />
+                  </div>
+                  <div>
+                    <h2 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-color)', margin: 0 }}>ABHA (ABDM) Integration</h2>
+                    <p style={{ fontSize: 11, color: 'var(--text-muted)', margin: '2px 0 0' }}>Verify patient details instantly via Aadhaar OTP</p>
+                  </div>
+                </div>
+                {formData.abhaNumber && (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#DCFCE7', color: '#15803D', padding: '4px 10px', borderRadius: 20, fontSize: 11, fontWeight: 700 }}>
+                    <Check size={12} /> ABHA VERIFIED
+                  </div>
+                )}
+              </div>
+
+              {/* Status alerts inside the widget */}
+              {abhaError && (
+                <div style={{ padding: '10px 14px', background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                  <AlertCircle size={14} color="#DC2626" />
+                  <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: '#991B1B' }}>{abhaError}</p>
+                </div>
+              )}
+              {abhaSuccess && (
+                <div style={{ padding: '10px 14px', background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                  <Check size={14} color="#15803D" />
+                  <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: '#166534' }}>{abhaSuccess}</p>
+                </div>
+              )}
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {!otpSent ? (
+                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                    <div style={{ flex: 1, minWidth: 240 }}>
+                      <label style={{ display: 'block', fontSize: 10, fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", marginBottom: 5 }}>
+                        Aadhaar Number
+                      </label>
+                      <input
+                        type="text"
+                        maxLength={12}
+                        placeholder="Enter 12-digit Aadhaar number"
+                        value={aadhaarNumber}
+                        onChange={e => setAadhaarNumber(e.target.value.replace(/[^0-9]/g, ''))}
+                        style={inp}
+                        disabled={verifyingAbha}
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleRequestOtp}
+                      disabled={verifyingAbha || aadhaarNumber.length !== 12}
+                      style={{
+                        padding: '9px 18px',
+                        background: verifyingAbha || aadhaarNumber.length !== 12 ? '#E5E7EB' : '#DC2626',
+                        color: verifyingAbha || aadhaarNumber.length !== 12 ? '#9CA3AF' : '#fff',
+                        border: 'none',
+                        borderRadius: 8,
+                        fontSize: 12,
+                        fontWeight: 700,
+                        cursor: verifyingAbha || aadhaarNumber.length !== 12 ? 'not-allowed' : 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        height: 38,
+                        boxSizing: 'border-box'
+                      }}
+                    >
+                      {verifyingAbha && <RefreshCw size={12} style={{ animation: 'spin 1s linear infinite' }} />}
+                      Get Aadhaar OTP
+                    </button>
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                    <div style={{ flex: 1, minWidth: 240 }}>
+                      <label style={{ display: 'block', fontSize: 10, fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: "'DM Mono', monospace", marginBottom: 5 }}>
+                        Enter OTP
+                      </label>
+                      <input
+                        type="text"
+                        maxLength={6}
+                        placeholder="Enter 6-digit OTP"
+                        value={otpValue}
+                        onChange={e => setOtpValue(e.target.value.replace(/[^0-9]/g, ''))}
+                        style={inp}
+                        disabled={verifyingAbha}
+                      />
+                    </div>
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <button
+                        type="button"
+                        onClick={handleVerifyOtp}
+                        disabled={verifyingAbha || !otpValue}
+                        style={{
+                          padding: '9px 18px',
+                          background: verifyingAbha || !otpValue ? '#E5E7EB' : '#DC2626',
+                          color: verifyingAbha || !otpValue ? '#9CA3AF' : '#fff',
+                          border: 'none',
+                          borderRadius: 8,
+                          fontSize: 12,
+                          fontWeight: 700,
+                          cursor: verifyingAbha || !otpValue ? 'not-allowed' : 'pointer',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 6,
+                          height: 38,
+                          boxSizing: 'border-box'
+                        }}
+                      >
+                        {verifyingAbha && <RefreshCw size={12} style={{ animation: 'spin 1s linear infinite' }} />}
+                        Verify & Auto-Fill
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => { setOtpSent(false); setOtpValue(''); setAbhaError(''); setAbhaSuccess(''); }}
+                        style={{
+                          padding: '9px 14px',
+                          background: 'var(--card-bg)',
+                          border: '1px solid var(--border-color)',
+                          color: 'var(--text-color)',
+                          borderRadius: 8,
+                          fontSize: 12,
+                          fontWeight: 600,
+                          cursor: 'pointer',
+                          height: 38,
+                          boxSizing: 'border-box'
+                        }}
+                      >
+                        Back
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Show details when ABHA details are linked in form */}
+                {formData.abhaNumber && (
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: 10,
+                    background: 'var(--input-bg)',
+                    padding: 14,
+                    borderRadius: 10,
+                    border: '1px dashed var(--card-border)',
+                    marginTop: 8
+                  }}>
+                    <div>
+                      <span style={{ display: 'block', fontSize: 9, fontWeight: 700, color: 'var(--text-muted)' }}>ABHA NUMBER</span>
+                      <strong style={{ fontSize: 13, color: 'var(--text-color)' }}>{formData.abhaNumber}</strong>
+                    </div>
+                    <div>
+                      <span style={{ display: 'block', fontSize: 9, fontWeight: 700, color: 'var(--text-muted)' }}>ABHA ADDRESS</span>
+                      <strong style={{ fontSize: 13, color: 'var(--text-color)' }}>{formData.abhaAddress}</strong>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 20 }}>
 
             {/* ── Left Column ── */}
@@ -279,6 +530,12 @@ const RegisterPatient = () => {
                       <Mail size={13} color="#9CA3AF" style={{ position: 'absolute', left: 12, top: 11 }} />
                       <input type="email" value={formData.email} onChange={e => set('email', e.target.value)} placeholder="patient@mail.com" style={{ ...inp, paddingLeft: 34 }} />
                     </div>
+                  </Field>
+                  <Field label="ABHA Number">
+                    <input type="text" value={formData.abhaNumber} onChange={e => set('abhaNumber', e.target.value)} placeholder="e.g. 91-1234-5678-9012" style={inp} />
+                  </Field>
+                  <Field label="ABHA Address">
+                    <input type="text" value={formData.abhaAddress} onChange={e => set('abhaAddress', e.target.value)} placeholder="e.g. patient@sbx" style={inp} />
                   </Field>
                 </div>
               </div>

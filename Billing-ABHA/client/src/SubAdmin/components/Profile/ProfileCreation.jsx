@@ -121,7 +121,7 @@ const ProfileCreation = () => {
           
           // If already approved, redirect to dashboard
           if (response.profile.verificationStatus === 'APPROVED') {
-            navigate('/dashboard');
+            navigate('/subadmin');
           }
         }
       }

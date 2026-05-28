@@ -22,6 +22,7 @@ import labRoutes from "./router/labRoutes.js";
 import staffRoutes from "./router/staffRoutes.js";
 import opdConsultationRoutes from "./router/opdConsultationRoutes.js";
 import publicRoutes from "./router/publicRoutes.js";
+import abdmRoutes from "./router/abdmRoutes.js";
 
 console.log("ENV CHECK:", {
   EMAIL_USER: process.env.EMAIL_USER,
@@ -57,6 +58,8 @@ app.use("/api/lab", labRoutes);
 app.use("/api/staff", staffRoutes);
 app.use("/api/opd/consultation", opdConsultationRoutes);
 app.use("/api/public", publicRoutes);
+app.use("/api/abdm", abdmRoutes);
+app.use("/", abdmRoutes); // To intercept root-level webhook callback endpoints (/v1.0/... and /api/v3/...)
 
 app.get("/", (req, res) => {
   res.send("Billing SaaS Backend Running");

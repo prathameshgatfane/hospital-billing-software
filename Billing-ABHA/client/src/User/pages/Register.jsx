@@ -270,7 +270,7 @@ const Register = () => {
                     className="accent-primary w-4 h-4"
                   />
                   <label className="text-xs text-gray-400 font-medium">
-                    I agree to the <span className="text-primary cursor-pointer hover:underline">Terms of Service</span> and <span className="text-primary cursor-pointer hover:underline">Privacy Policy</span>
+                    I agree to the <Link to="/terms" target="_blank" className="text-primary hover:underline">Terms of Service</Link> and <Link to="/privacy" target="_blank" className="text-primary hover:underline">Privacy Policy</Link>
                   </label>
                 </div>
 

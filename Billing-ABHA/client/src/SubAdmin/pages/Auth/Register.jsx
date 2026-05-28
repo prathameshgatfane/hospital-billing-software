@@ -259,7 +259,7 @@ const Register = () => {
               </div>
               <h1 className="text-3xl font-bold mb-4">Hospital Billing Solution</h1>
               <p className="text-red-100">
-                Join thousands of hospitals using Makvid for seamless billing and financial management.
+                Join thousands of hospitals using Mapvon for seamless billing and financial management.
               </p>
             </div>
 
@@ -304,7 +304,7 @@ const Register = () => {
                   <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center">
                     <FileText className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-2xl font-bold text-gray-900">Makvid</span>
+                  <span className="text-2xl font-bold text-gray-900">Mapvon</span>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900">
                   {step === 1 ? 'Hospital Registration' : 'Verify Email'}

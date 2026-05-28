@@ -6,6 +6,25 @@ import { useAuth } from "../../../Common/context/AuthContext";
 const AdminLogin = () => {
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    // Force light mode on document root while admin login screen is mounted
+    const root = document.documentElement;
+    const isDark = root.classList.contains("dark");
+    if (isDark) {
+      root.classList.remove("dark");
+      root.style.colorScheme = "light";
+    }
+
+    return () => {
+      // Restore user's preferred theme when leaving admin pages
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        root.classList.add("dark");
+        root.style.colorScheme = "dark";
+      }
+    };
+  }, []);
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState("");
